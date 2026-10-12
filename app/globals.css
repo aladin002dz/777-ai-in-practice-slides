@@ -4,8 +4,7 @@
 /* Native web reconstruction of the official 1440 × 810 template.
    Only individual supplied logos and the speaker photograph are images. */
 :root{--green:#239b4b;--ink:#171b18}
-.slide{background-color:#f5f5f3;background-image:radial-gradient(ellipse at 12% 18%,#e9e9e666,transparent 45%),linear-gradient(135deg,#f1f1ef,#fafaf8 50%,#eeeeec);overflow:hidden}
-.slide-1{background-image:radial-gradient(ellipse at 12% 18%,#e9e9e666,transparent 45%),linear-gradient(135deg,#f1f1ef,#fafaf8 50%,#eeeeec)}
+.slide{background-color:#f5f5f3;background-image:url("../public/session/texture.png");background-size:cover;background-position:center;overflow:hidden}
 .cover-speaker{top:30.4%;left:4.3%;padding:.65cqw 1.4cqw;background:var(--green);border-radius:1.5cqw;font-size:2cqw;line-height:1.35;min-width:22%;text-align:center}
 .cover-title{top:40%;left:4.3%;font-size:3.4cqw;line-height:1.05}
 .cover-title span{font-size:2.65cqw}
@@ -273,3 +272,35 @@ body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weig
  .print-deck .quiz-actions button { display: none; }
 }
 .slide a{color:#0759b6;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.18em;white-space:nowrap}.slide a:hover{color:#003f85;text-decoration-thickness:3px}.slide a span[aria-hidden]{display:inline-block;font-size:.85em;text-decoration:none}.slide a:focus-visible{outline:3px solid #239b4b;outline-offset:4px}
+
+/* Slide 4: spread the program intro like the template instead of leaving a gap. */
+.program-intro>div{display:flex;flex-direction:column;justify-content:center}
+.program-intro aside{display:flex;flex-direction:column;justify-content:center}
+.program-intro h1{margin-bottom:5.5cqw}
+
+/* Agenda: proportional time bar plus a readable timeline. */
+.agenda-layout{margin-top:1.2cqw}
+.agenda-bar{display:flex;gap:.35cqw;height:2.6cqw;margin-bottom:1.6cqw}
+.agenda-bar span{display:grid;place-items:center;border-radius:6px;background:#cfe3d4;color:#176c34;font-size:1.05cqw;font-weight:700}
+.agenda-bar span:nth-child(odd){background:#239b4b;color:white}
+.slide-content .agenda{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.7cqw 2.4cqw}
+.slide-content .agenda li{display:grid;grid-template-columns:6.2cqw 1fr auto;align-items:center;gap:1cqw;margin:0;padding:.8cqw 1.1cqw;border:1px solid #bdcec2;border-radius:10px;background:#fafbf8e6;font-size:1.5cqw;line-height:1.3}
+.agenda time{font-weight:750;color:#239b4b}
+.agenda small{font-size:1.1cqw;color:#497556;white-space:nowrap}
+
+/* Real-life examples: three before/after cards matching the poll letters. */
+.slide-content .examples{list-style:none;margin:1.4cqw 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw}
+.slide-content .examples li{display:flex;flex-direction:column;margin:0;padding:1.4cqw;border:1px solid #bdcec2;border-radius:12px;background:#fafbf8e6}
+.examples h2{font-size:1.75cqw;line-height:1.2;margin:.8cqw 0 1cqw;color:#171b18}
+.examples p{margin:0;font-size:1.3cqw;line-height:1.4;padding:.8cqw 1cqw;border-radius:8px}
+.examples .before{background:#eceeea;color:#4c5a50}
+.examples .after{background:#e4f2e7;color:#14532a;border-left:3px solid #239b4b}
+.examples-arrow{align-self:center;color:#239b4b;font-size:1.8cqw;line-height:1;margin:.4cqw 0}
+.examples-note{margin:1.4cqw 0 0;font-size:1.2cqw;color:#3d5946}
+@media screen and (max-width:800px){
+ .agenda-bar{height:28px;gap:4px;margin-bottom:18px}.agenda-bar span{font-size:12px}
+ .slide-content .agenda{grid-template-columns:1fr;gap:10px}
+ .slide-content .agenda li{grid-template-columns:62px 1fr auto;font-size:17px;padding:12px 14px;gap:10px}.agenda small{font-size:14px}
+ .slide-content .examples{grid-template-columns:1fr;gap:16px}
+ .slide-content .examples li{padding:18px}.examples h2{font-size:21px;margin:10px 0 12px}.examples p{font-size:17px;padding:10px 12px}.examples-arrow{font-size:22px;margin:6px 0}.examples-note{font-size:16px;margin-top:18px}
+}

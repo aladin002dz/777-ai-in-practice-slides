@@ -14,8 +14,12 @@
     "bullets": [
       "Mahfoudh Arous",
       "Senior Software Engineer & Mentor",
-      "Today’s session: AI in Practice",
-      "Website & contact: https://mahfoudh.dev/"
+      "Builds production web & mobile apps, including DonateBlood, a blood-donor platform used by a charity in Algeria",
+      "Open-source contributor to the Arabic translation of the official React documentation",
+      "Creates videos on AI and software development in Arabic, French and English",
+      "Speaker at 7.77 (Chlef), University of Chlef Science Day, Algeria 2.0 and GDG I/O Extended",
+      "Website & contact: https://mahfoudh.dev/",
+      "LinkedIn: https://www.linkedin.com/in/mahfoudh-arous/"
     ]
   },
   {
@@ -28,7 +32,7 @@
       "Digital skills for every generation",
       "Practical, inclusive and accessible digital learning",
       "An initiative led by Algeria's Ministry of Post and Telecommunications, in partnership with Algérie Télécom and Mobilis",
-      "Today's focus: a useful professional presence online"
+      "07 Skill Centers across Algeria"
     ]
   },
   {
@@ -42,6 +46,18 @@
     ]
   },
   {
+    "title": "Session Agenda",
+    "bullets": [
+      "19:30 | Welcome & the 7.77 Program | 5 min",
+      "19:35 | Goals & quick poll | 5 min",
+      "19:40 | AI workflow, prompting & quiz | 15 min",
+      "19:55 | Live demo: design & build | 20 min",
+      "20:15 | Review & deploy | 10 min",
+      "20:25 | Mini challenge | 10 min",
+      "20:35 | Questions & next steps | 10 min"
+    ]
+  },
+  {
     "title": "Quick Poll: What Would You Build?",
     "bullets": [
       "A personal portfolio to present your skills and work",
@@ -49,6 +65,15 @@
       "A small-business website to help customers understand your activity",
       "Choose one in the poll or chat",
       "Who should visit your page, and what should they do next?"
+    ]
+  },
+  {
+    "title": "Real-Life Examples: Who Needs a Page?",
+    "bullets": [
+      "Freelance translator | Before: a CV sent by email | After: a portfolio page with languages, sample work and a contact link",
+      "Private tutor | Before: details shared in WhatsApp groups | After: a service page with subjects, levels, schedule and how to book",
+      "Local bakery | Before: a Facebook post and a phone number | After: a small-business page with products, opening hours and a map",
+      "These are illustrative examples; we will build a real one in the live demo"
     ]
   },
   {
@@ -82,7 +107,7 @@
       "Vague: \"Make me a professional website.\"",
       "Role: \"Act as a website content planner.\"",
       "Context: \"Use Mahfoudh Arous’s public LinkedIn profile as the source for his personal website and portfolio.\"",
-      "Task: \"Draft a concise one-page service website outline.\"",
+      "Task: \"Draft a concise one-page personal website and portfolio outline.\"",
       "Format: \"Return a table of sections and suggested copy.\"",
       "Constraints: \"Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details.\""
     ]
@@ -94,7 +119,6 @@
       "Example: \"Use approved facts, write concise copy, flag missing information and check the result.\"",
       "Skills package task instructions and resources in supporting tools",
       "Gems provide reusable custom instructions and knowledge in Gemini",
-      "Support and behavior depend on the tool; a Skill is not automatically interchangeable with a Gem",
       "Live example: apply one prepared instruction set to the website brief"
     ]
   },
@@ -113,7 +137,7 @@
     "title": "Live Demo: From My LinkedIn Profile to My Portfolio",
     "bullets": [
       "LinkedIn: Profile → Resources → Save to PDF; upload to Gemini to extract experience, skills and projects",
-      "Website goal: help visitors understand the speaker’s professional work",
+      "Website goal: help visitors understand my professional work",
       "Approve the copy before building the page",
       "Do not invent qualifications, projects, results or testimonials"
     ]

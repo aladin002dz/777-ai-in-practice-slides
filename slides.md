@@ -6,7 +6,7 @@ Time: 19:30-20:45, Algeria time. Audience: ages 31-45, new participants.
 
 Session tools: use **Gemini and Antigravity free accounts throughout the AI workflow**. Gemini supports planning, content and design guidance; Antigravity supports building, previewing and improving the website. Use Git/GitHub and GitHub Pages for version control and deployment. No paid AI subscription is required for the planned demonstration. Rehearse on the actual free accounts and prepare saved checkpoints for usage limits or unavailable features.
 
-Presenter preparation: deliver explanations in Algerian Darja, retaining English technical terms. Use the official 7.77 template when producing the presentation. These preparation notes are not projected slide content. The program introduction below summarizes the supplied official template; confirm its wording with Souad before final export. Omit the template's center count until confirmed. Use the selected portrait on slide 3; select the final short biography and public contact details separately.
+Presenter preparation: deliver explanations in Algerian Darja, retaining English technical terms. Use the official 7.77 template when producing the presentation. These preparation notes are not projected slide content. The program introduction below summarizes the supplied official template; confirm its wording with Souad before final export. Slide 2 uses the selected portrait and a short biography drawn from mahfoudh.dev.
 
 
 ## 1. AI in Practice: Design, Build and Deploy your Personal Website & Portfolio — Without Coding
@@ -21,8 +21,12 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 
 - Mahfoudh Arous
 - Senior Software Engineer & Mentor
-- Today’s session: AI in Practice
+- Builds production web & mobile apps, including DonateBlood, a blood-donor platform used by a charity in Algeria
+- Open-source contributor to the Arabic translation of the official React documentation
+- Creates videos on AI and software development in Arabic, French and English
+- Speaker at 7.77 (Chlef), University of Chlef Science Day, Algeria 2.0 and GDG I/O Extended
 - Website & contact: https://mahfoudh.dev/
+- LinkedIn: https://www.linkedin.com/in/mahfoudh-arous/
 
 ## 3. Welcome Everyone
 
@@ -31,7 +35,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Digital skills for every generation
 - Practical, inclusive and accessible digital learning
 - An initiative led by Algeria's Ministry of Post and Telecommunications, in partnership with Algérie Télécom and Mobilis
-- Today's focus: a useful professional presence online
+- 07 Skill Centers across Algeria
 
 ## 5. What You Will Learn
 
@@ -41,7 +45,17 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Review the result and request one precise improvement
 - Understand Git, GitHub and website deployment
 
-## 6. Quick Poll: What Would You Build?
+## 6. Session Agenda
+
+- 19:30 | Welcome & the 7.77 Program | 5 min
+- 19:35 | Goals & quick poll | 5 min
+- 19:40 | AI workflow, prompting & quiz | 15 min
+- 19:55 | Live demo: design & build | 20 min
+- 20:15 | Review & deploy | 10 min
+- 20:25 | Mini challenge | 10 min
+- 20:35 | Questions & next steps | 10 min
+
+## 7. Quick Poll: What Would You Build?
 
 - A personal portfolio to present your skills and work
 - A service page to explain what you offer
@@ -49,7 +63,14 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Choose one in the poll or chat
 - Who should visit your page, and what should they do next?
 
-## 7. A Practical AI Workflow
+## 8. Real-Life Examples: Who Needs a Page?
+
+- Freelance translator | Before: a CV sent by email | After: a portfolio page with languages, sample work and a contact link
+- Private tutor | Before: details shared in WhatsApp groups | After: a service page with subjects, levels, schedule and how to book
+- Local bakery | Before: a Facebook post and a phone number | After: a small-business page with products, opening hours and a map
+- These are illustrative examples; we will build a real one in the live demo
+
+## 9. A Practical AI Workflow
 
 - Our AI tools throughout: Gemini and Antigravity, using free accounts
 - Gemini: plan the page, draft content and guide the design
@@ -61,7 +82,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Deploy: make the reviewed website available online
 - Repeat: brief -> draft -> check -> improve
 
-## 8. Better Prompts with RCTFC
+## 10. Better Prompts with RCTFC
 
 - Role: who should AI act as?
 - Context: who is the website for, and why?
@@ -70,25 +91,24 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Constraints: what must AI include, avoid or verify?
 - Treat RCTFC as a practical checklist; review the actual answer
 
-## 9. From a Vague Request to a Useful Brief
+## 11. From a Vague Request to a Useful Brief
 
 - Vague: "Make me a professional website."
 - Role: "Act as a website content planner."
 - Context: "Use Mahfoudh Arous’s public LinkedIn profile as the source for his personal website and portfolio."
-- Task: "Draft a concise one-page service website outline."
+- Task: "Draft a concise one-page personal website and portfolio outline."
 - Format: "Return a table of sections and suggested copy."
 - Constraints: "Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details."
 
-## 10. Reuse Your Instructions: Skills & Gems
+## 12. Reuse Your Instructions: Skills & Gems
 
 - Save a short instruction checklist for tasks you repeat
 - Example: "Use approved facts, write concise copy, flag missing information and check the result."
 - Skills package task instructions and resources in supporting tools
 - Gems provide reusable custom instructions and knowledge in Gemini
-- Support and behavior depend on the tool; a Skill is not automatically interchangeable with a Gem
 - Live example: apply one prepared instruction set to the website brief
 
-## 11. Quick Quiz: Which Instruction Helps Most?
+## 13. Quick Quiz: Which Instruction Helps Most?
 
 - Goal: reduce invented professional claims
 - A: "Make my profile sound impressive."
@@ -97,14 +117,14 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Vote A, B or C in the poll or chat
 - Discuss: what should you still check in the AI's answer?
 
-## 12. Live Demo: From My LinkedIn Profile to My Portfolio
+## 14. Live Demo: From My LinkedIn Profile to My Portfolio
 
 - LinkedIn: Profile → Resources → Save to PDF; upload to Gemini to extract experience, skills and projects
-- Website goal: help visitors understand the speaker’s professional work
+- Website goal: help visitors understand my professional work
 - Approve the copy before building the page
 - Do not invent qualifications, projects, results or testimonials
 
-## 13. Design & Build One Clear Page
+## 15. Design & Build One Clear Page
 
 - Approve the copy before generating the website
 - Use a simple structure: introduction, services, about and next step
@@ -113,7 +133,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Open the preview and explain the visible result
 - A design image is a reference; a website must contain usable text and links
 
-## 14. Review, Improve & Check Again
+## 16. Review, Improve & Check Again
 
 - Are all statements supported by the supplied profile?
 - Is the text readable on a phone?
@@ -123,7 +143,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Audience question: what is the most useful improvement?
 - Request one specific revision, then repeat the affected checks
 
-## 15. Git, GitHub & Deploying Your Website
+## 17. Git, GitHub & Deploying Your Website
 
 - Git: save versions of your project locally and track changes
 - GitHub: keep a project repository online
@@ -133,7 +153,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Open and check the online version; a deployment attempt is not proof of success
 - Protect existing websites and never upload secrets or private files
 
-## 16. Mini Challenge: Write Your Website Brief
+## 18. Mini Challenge: Write Your Website Brief
 
 - Choose: portfolio, service page or small-business website
 - 2 minutes: identify your audience and the action visitors should take
@@ -143,7 +163,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - 1 minute: choose one improvement to your brief
 - Use chat or paper; no account or installation is required
 
-## 17. Questions & Your Next Step
+## 19. Questions & Your Next Step
 
 - What would you like to clarify about prompting, building or deployment?
 - Start with one audience, one goal and one simple page
@@ -151,7 +171,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Test the website before sharing its link
 - Continue with the session's prompts, activity and example files
 
-## 18. Keep Learning, Keep Building
+## 20. Keep Learning, Keep Building
 
 - Thank you for taking part in the 7.77 session.
 - Official 7.77 Program: https://skillscenter.algerietelecom.dz/programs/777-program
