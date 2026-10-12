@@ -251,12 +251,12 @@ body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weig
 /* Fit the entire desktop slide plus navigation inside the browser viewport.
    Width alone makes a 16:9 canvas overflow shorter laptop screens. */
 @media screen and (min-width:801px) {
- .deck-shell { width:100%; max-width:none; padding:16px 24px; }
- .deck-stage { width:min(100%, calc((100dvh - 112px) * 16 / 9)); margin:0 auto 40px; }
+ .deck-shell { position:relative; width:100%; max-width:none; padding:76px 24px; min-height:100dvh; display:flex; flex-direction:column; justify-content:center; }
+ .deck-stage { width:min(100%, calc((100dvh - 152px) * 16 / 9)); margin:0 auto; }
  .deck-stage.is-overview { width:100%; max-width:1450px; }
  .deck-stage > .slide { width:100%; min-height:0; aspect-ratio:16/9; }
  .deck-controls { bottom:-28px; }
- .keyboard-hint { margin:0; line-height:20px; }
+ .keyboard-hint { position:absolute; left:0; right:0; bottom:14px; margin:0; line-height:20px; }
 }
 
 /* Print the same branded canvas as the presentation, at template dimensions. */

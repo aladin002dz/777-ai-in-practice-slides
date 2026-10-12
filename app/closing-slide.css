@@ -1,7 +1,7 @@
 /* Closing slide: readable links and QR codes with a white quiet zone. */
-/* Center each slide's content between equal canvas insets. */
+/* Center each slide's content in the band between the program tab (ends ~9.7%) and the footer (starts ~94.4%). */
 @media screen and (min-width:801px){
-  .slide-content{top:14%;bottom:14%;display:flex;flex-direction:column;justify-content:center}
+  .slide-content{top:10.2%;bottom:5.1%;display:flex;flex-direction:column;justify-content:center}
   .slide-content> *{flex-shrink:0}
 }
 .closing-thanks{font-size:1.7cqw;margin:0 0 2cqw}
