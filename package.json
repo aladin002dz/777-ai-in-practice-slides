@@ -1,0 +1,27 @@
+{
+  "name": "777-online-session-2026-10-15",
+  "version": "1.0.0",
+  "private": true,
+  "description": "English 7.77 online session slides",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:usb": "npm run build && node scripts/make-portable.mjs",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "qrcode-generator": "^2.0.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "22.20.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2"
+  }
+}

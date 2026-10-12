@@ -1,0 +1,178 @@
+[
+  {
+    "title": "AI in Practice: Design, Build and Deploy your Personal Website & Portfolio",
+    "bullets": [
+      "7.77 Program | Online Session",
+      "Mahfoudh Arous",
+      "October 15, 2026 | 19:30-20:45",
+      "Age group: 31-45",
+      "From a clear brief to a website you can review and share"
+    ]
+  },
+  {
+    "title": "Welcome to the 7.77 Program",
+    "bullets": [
+      "Digital skills for every generation",
+      "Practical, inclusive and accessible digital learning",
+      "An initiative led by Algeria's Ministry of Post and Telecommunications, in partnership with Algérie Télécom and Mobilis",
+      "Today's focus: a useful professional presence online"
+    ]
+  },
+  {
+    "title": "Meet Your Speaker & See the Destination",
+    "bullets": [
+      "Mahfoudh Arous | Session speaker",
+      "Today: a professional profile becomes a simple, usable website",
+      "We will guide AI in plain language, review its work and improve the result",
+      "AI generates the code; we remain responsible for the content and quality",
+      "Live preview: the prepared finished example"
+    ]
+  },
+  {
+    "title": "What You Will Learn",
+    "bullets": [
+      "Write a clear website brief using RCTFC",
+      "Reuse instructions to make AI work more consistently",
+      "Design and build a simple website from approved profile facts",
+      "Review the result and request one precise improvement",
+      "Understand Git, GitHub and website deployment"
+    ]
+  },
+  {
+    "title": "Quick Poll: What Would You Build?",
+    "bullets": [
+      "A personal portfolio to present your skills and work",
+      "A service page to explain what you offer",
+      "A small-business website to help customers understand your activity",
+      "Choose one in the poll or chat",
+      "Who should visit your page, and what should they do next?"
+    ]
+  },
+  {
+    "title": "A Practical AI Workflow",
+    "bullets": [
+      "Our AI tools throughout: Gemini and Antigravity, using free accounts",
+      "Gemini: plan the page, draft content and guide the design",
+      "Antigravity: build, preview and improve the website",
+      "Plan: define the audience, purpose and approved facts",
+      "Design: choose a clear structure and readable appearance",
+      "Build: ask AI to create the page and open the preview",
+      "Review: check facts, mobile layout and links",
+      "Deploy: make the reviewed website available online",
+      "Repeat: brief -> draft -> check -> improve"
+    ]
+  },
+  {
+    "title": "Better Prompts with RCTFC",
+    "bullets": [
+      "Role: who should AI act as?",
+      "Context: who is the website for, and why?",
+      "Task: what should AI produce?",
+      "Format: how should the answer be organized?",
+      "Constraints: what must AI include, avoid or verify?",
+      "Treat RCTFC as a practical checklist; review the actual answer"
+    ]
+  },
+  {
+    "title": "From a Vague Request to a Useful Brief",
+    "bullets": [
+      "Vague: \"Make me a professional website.\"",
+      "Role: \"Act as a website content planner.\"",
+      "Context: \"Amel offers administrative support to small businesses in Chlef. This is a fictional training example.\"",
+      "Task: \"Draft a concise one-page service website outline.\"",
+      "Format: \"Return a table of sections and suggested copy.\"",
+      "Constraints: \"Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details.\""
+    ]
+  },
+  {
+    "title": "Reuse Your Instructions: Skills & Gems",
+    "bullets": [
+      "Save a short instruction checklist for tasks you repeat",
+      "Example: \"Use approved facts, write concise copy, flag missing information and check the result.\"",
+      "Skills package task instructions and resources in supporting tools",
+      "Gems provide reusable custom instructions and knowledge in Gemini",
+      "Support and behavior depend on the tool; a Skill is not automatically interchangeable with a Gem",
+      "Live example: apply one prepared instruction set to the website brief"
+    ]
+  },
+  {
+    "title": "Quick Quiz: Which Instruction Helps Most?",
+    "bullets": [
+      "Goal: reduce invented professional claims",
+      "A: \"Make my profile sound impressive.\"",
+      "B: \"Use only supplied facts and clearly mark missing information.\"",
+      "C: \"Add convincing client testimonials.\"",
+      "Vote A, B or C in the poll or chat",
+      "Discuss: what should you still check in the AI's answer?"
+    ]
+  },
+  {
+    "title": "Live Demo: Meet Amel",
+    "bullets": [
+      "Fictional professional profile for training only",
+      "Independent administrative-support provider in Chlef",
+      "Audience: small-business owners",
+      "Services: document organization, appointment coordination and spreadsheet cleanup",
+      "Website goal: help visitors understand the services",
+      "No real clients, testimonials, credentials or private contact details"
+    ]
+  },
+  {
+    "title": "Design & Build One Clear Page",
+    "bullets": [
+      "Approve the copy before generating the website",
+      "Use a simple structure: introduction, services, about and next step",
+      "Choose readable text, clear spacing and one main accent color",
+      "Ask AI to build a responsive page using the approved content",
+      "Open the preview and explain the visible result",
+      "A design image is a reference; a website must contain usable text and links"
+    ]
+  },
+  {
+    "title": "Review, Improve & Check Again",
+    "bullets": [
+      "Are all statements supported by the supplied profile?",
+      "Is the text readable on a phone?",
+      "Do navigation and approved links work?",
+      "Can you move through interactive elements with a keyboard?",
+      "Avoid private information, exposed credentials and pretend contact forms",
+      "Audience question: what is the most useful improvement?",
+      "Request one specific revision, then repeat the affected checks"
+    ]
+  },
+  {
+    "title": "Git, GitHub & Deploying Your Website",
+    "bullets": [
+      "Git: save versions of your project and track changes",
+      "GitHub: keep a project repository online",
+      "GitHub Pages: publish a static website from a repository",
+      "Local preview and public website are different stages",
+      "Prepared walkthrough: files -> repository -> publishing settings -> deployment status -> public URL",
+      "Open and check the online version; a deployment attempt is not proof of success",
+      "Protect existing websites and never upload secrets or private files"
+    ]
+  },
+  {
+    "title": "Mini Challenge: Write Your Website Brief",
+    "bullets": [
+      "Choose: portfolio, service page or small-business website",
+      "2 minutes: identify your audience and the action visitors should take",
+      "4 minutes: write your RCTFC brief using fictional or approved public facts",
+      "Include: page sections, desired format and limits on invented information",
+      "3 minutes: discuss two volunteer examples",
+      "1 minute: choose one improvement to your brief",
+      "Use chat or paper; no account or installation is required"
+    ]
+  },
+  {
+    "title": "Questions & Your Next Step",
+    "bullets": [
+      "What would you like to clarify about prompting, building or deployment?",
+      "Start with one audience, one goal and one simple page",
+      "Reuse the prompt checklist and review every public claim",
+      "Test the website before sharing its link",
+      "Continue with the session's prompts, activity and example files",
+      "Thank you for joining the 7.77 Program session"
+    ]
+  }
+]
