@@ -45,7 +45,7 @@ export default function ExplainerDiagram({ kind }: { kind: keyof typeof content 
     <div className="publishing-steps">
       {data.nodes.map((n,i) => <div className="publishing-step" tabIndex={0} key={n.title}>
         <span className="icon-badge">{n.icon === "github" ? <GitHubMark/> : <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={icons[n.icon]}/></svg>}</span>
-        <div><strong>{n.title}</strong><span>{n.detail}</span></div><small>0{i+1}</small>
+        <div><strong>{n.title === "Git" || n.title === "GitHub" ? <a href={n.title === "Git" ? "https://git-scm.com/downloads" : "https://github.com"} target="_blank" rel="noopener noreferrer">{n.title} <span aria-hidden="true">↗</span></a> : n.title}</strong><span>{n.detail}</span></div><small>0{i+1}</small>
         {i < data.nodes.length-1 && <span className="publishing-arrow" aria-hidden="true">↓</span>}
       </div>)}
     </div><figcaption>{data.caption}</figcaption>

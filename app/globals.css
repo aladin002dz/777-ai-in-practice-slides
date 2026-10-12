@@ -237,6 +237,28 @@ body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weig
 .cover-title span{letter-spacing:-.035em}
 .print-slide h1{font-weight:700}
 
+.session-transcript{max-width:1450px;margin:24px auto 48px;padding:0 30px;color:#344b3a;font-size:16px;line-height:1.6}
+.session-transcript summary{cursor:pointer;padding:16px 20px;border:1px solid #bdcec2;border-radius:10px;background:#eff3ec;font-weight:600}
+.session-transcript summary:focus-visible{outline:3px solid #239b4b;outline-offset:4px}
+.session-transcript details[open]{padding-bottom:24px}
+.session-transcript h2{font-size:25px;margin:24px 0 16px;line-height:1.3}
+.session-transcript h3{font-size:20px;margin:24px 0 12px}
+.session-transcript ul{list-style:disc;padding-left:26px}
+.session-transcript li{margin:8px 0}
+@media(max-width:800px){.session-transcript{padding:0 12px;font-size:18px}}
+@media print{.session-transcript{display:none}}
+
+/* Fit the entire desktop slide plus navigation inside the browser viewport.
+   Width alone makes a 16:9 canvas overflow shorter laptop screens. */
+@media screen and (min-width:801px) {
+ .deck-shell { width:100%; max-width:none; padding:16px 24px; }
+ .deck-stage { width:min(100%, calc((100dvh - 112px) * 16 / 9)); margin:0 auto 40px; }
+ .deck-stage.is-overview { width:100%; max-width:1450px; }
+ .deck-stage > .slide { width:100%; min-height:0; aspect-ratio:16/9; }
+ .deck-controls { bottom:-28px; }
+ .keyboard-hint { margin:0; line-height:20px; }
+}
+
 /* Print the same branded canvas as the presentation, at template dimensions. */
 @media print {
  @page { size: 508mm 285.75mm; margin: 0; }
@@ -250,3 +272,4 @@ body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weig
  .print-deck .slide, .print-deck .slide * { animation: none !important; transition: none !important; }
  .print-deck .quiz-actions button { display: none; }
 }
+.slide a{color:#0759b6;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.18em;white-space:nowrap}.slide a:hover{color:#003f85;text-decoration-thickness:3px}.slide a span[aria-hidden]{display:inline-block;font-size:.85em;text-decoration:none}.slide a:focus-visible{outline:3px solid #239b4b;outline-offset:4px}

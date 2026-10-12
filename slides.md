@@ -103,9 +103,7 @@ Presenter-only answer: B. Instructions reduce risk but do not guarantee accuracy
 
 ## 11. Live Demo: From My LinkedIn Profile to My Portfolio
 
-- Source: Mahfoudh Arous’s public professional LinkedIn profile
-- Use prepared profile text so the demo does not depend on live retrieval
-- Identify the professional experience, skills and projects supported by the source
+- LinkedIn: Profile → Resources → Save to PDF; upload to Gemini to extract experience, skills and projects
 - Website goal: help visitors understand the speaker’s professional work
 - Approve the copy before building the page
 - Do not invent qualifications, projects, results or testimonials
@@ -131,8 +129,8 @@ Presenter-only answer: B. Instructions reduce risk but do not guarantee accuracy
 
 ## 14. Git, GitHub & Deploying Your Website
 
-- Git: save versions of your project and track changes
-- GitHub: keep a project repository online
+- [Git](https://git-scm.com/downloads): save versions of your project locally and track changes
+- [GitHub](https://github.com): keep a project repository online
 - GitHub Pages: publish a static website from a repository
 - Local preview and public website are different stages
 - Prepared walkthrough: files -> repository -> publishing settings -> deployment status -> public URL

@@ -5,7 +5,7 @@
   "description": "English 7.77 online session slides",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/make-seo.mjs",
     "build:usb": "npm run build && node scripts/make-portable.mjs",
     "start": "next start",
     "lint": "next lint"
