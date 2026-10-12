@@ -43,6 +43,7 @@ export default function SessionDeck() {
   };
   const slide = slides[index];
   return <main className="deck-shell">
+    <div className={`deck-stage${overview ? " is-overview" : ""}`}>
     <div className="presenter-bar"><span>7.77 · Online session · 15 October 2026</span><div><button onClick={() => setOverview(!overview)} aria-expanded={overview}>All slides</button><button onClick={fullscreen} aria-pressed={isFullscreen}>{isFullscreen ? "Exit fullscreen" : "Fullscreen"}</button><button onClick={() => window.print()}>Print</button></div></div>
     {notice && <p role="status">{notice}</p>}
     {overview ? <section className="overview" aria-label="Choose a slide">{slides.map((s,i) => <button key={s.title} onClick={() => {go(i);setOverview(false);}}><span>{String(i+1).padStart(2,"0")}</span>{s.title}</button>)}</section> : <article className={`slide slide-${index+1}`} aria-label={`Slide ${index+1} of ${slides.length}`} onTouchStart={e => {touch.current={x:e.touches[0].clientX,y:e.touches[0].clientY};}} onTouchEnd={e => {if(!touch.current)return;const dx=e.changedTouches[0].clientX-touch.current.x;const dy=e.changedTouches[0].clientY-touch.current.y;if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy))go(index+(dx<0?1:-1));touch.current=null;}}>
@@ -56,6 +57,7 @@ export default function SessionDeck() {
       <div className="slide-footer"><span>{index===0 ? "English slides · Darja delivery" : "AI in Practice · October 15, 2026"}</span><span>{String(index+1).padStart(2,"0")} / {slides.length}</span></div>
     </article>}
     <nav className="deck-controls" aria-label="Slide navigation"><button onClick={() => go(index-1)} disabled={index===0}>← Previous</button><label>Slide <select value={index} onChange={e => go(Number(e.target.value))}>{slides.map((s,i) => <option value={i} key={s.title}>{i+1}. {s.title}</option>)}</select></label><button onClick={() => go(index+1)} disabled={index===slides.length-1}>Next →</button></nav>
+    </div>
     <p className="keyboard-hint">Use ← → arrow keys · Home / End · Space to continue</p>
     <div className="print-deck">{slides.map((s,i)=><section className="print-slide" key={s.title}><div className="program-label"><span>7.77</span> program</div><h1>{s.title}</h1><ul>{s.bullets.map(b=><li key={b}>{b}</li>)}</ul><footer>{i+1} / {slides.length}</footer></section>)}</div>
   </main>;

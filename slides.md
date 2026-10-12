@@ -76,7 +76,7 @@ Educator clarification: qualifying institutions can provide Gemini for Education
 
 - Vague: "Make me a professional website."
 - Role: "Act as a website content planner."
-- Context: "Amel offers administrative support to small businesses in Chlef. This is a fictional training example."
+- Context: "Use Mahfoudh Arous’s public LinkedIn profile as the source for his personal website and portfolio."
 - Task: "Draft a concise one-page service website outline."
 - Format: "Return a table of sections and suggested copy."
 - Constraints: "Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details."
@@ -101,14 +101,14 @@ Educator clarification: qualifying institutions can provide Gemini for Education
 
 Presenter-only answer: B. Instructions reduce risk but do not guarantee accuracy; verify every public claim. Reveal the answer after voting.
 
-## 11. Live Demo: Meet Amel
+## 11. Live Demo: From My LinkedIn Profile to My Portfolio
 
-- Fictional professional profile for training only
-- Independent administrative-support provider in Chlef
-- Audience: small-business owners
-- Services: document organization, appointment coordination and spreadsheet cleanup
-- Website goal: help visitors understand the services
-- No real clients, testimonials, credentials or private contact details
+- Source: Mahfoudh Arous’s public professional LinkedIn profile
+- Use prepared profile text so the demo does not depend on live retrieval
+- Identify the professional experience, skills and projects supported by the source
+- Website goal: help visitors understand the speaker’s professional work
+- Approve the copy before building the page
+- Do not invent qualifications, projects, results or testimonials
 
 ## 12. Design & Build One Clear Page
 
