@@ -230,7 +230,7 @@
 }
 
 /* Local open-source substitute for the template's Codec Pro Bold. */
-@font-face{font-family:"Plus Jakarta Sans";src:url("/session/fonts/PlusJakartaSans-Variable.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("../../../session/fonts/PlusJakartaSans-Variable.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
 body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weight:500}
 .slide h1,.cover-speaker,.program-label,.speaker-layout h1{font-weight:700}
 .cover-title{letter-spacing:-.04em}
