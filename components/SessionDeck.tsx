@@ -69,7 +69,7 @@ export default function SessionDeck() {
 
         </div>}
       </>}
-      <div className="slide-footer"><span>{index===0 ? "English slides · Darja delivery" : "AI in Practice · October 15, 2026"}</span><span>{String(index+1).padStart(2,"0")} / {slides.length}</span></div>
+      <div className="slide-footer"><span>{index===0 ? "" : "AI in Practice · October 15, 2026"}</span><span>{String(index+1).padStart(2,"0")} / {slides.length}</span></div>
     </article>;
   };
   return <main className="deck-shell">
