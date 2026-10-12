@@ -77,3 +77,132 @@
   .deck-controls button{font-size:14px;min-height:44px;flex:1}
   .slide-footer{position:static;margin-bottom:14px}
 }
+
+/* Explicit markers also override Tailwind's list reset. */
+.slide-content ul,.speaker-layout ul,.print-slide ul{list-style-type:disc;list-style-position:outside}
+.slide-content li::marker,.speaker-layout li::marker,.print-slide li::marker{color:var(--green);font-size:1.15em;font-weight:700}
+.speaker-layout li{padding-left:.4em}
+@media screen and (max-width:800px){
+  .slide-content ul,.slide-content ul.compact,.speaker-layout ul{padding-left:26px}
+  .slide-content li,.speaker-layout li{padding-left:6px}
+}
+
+/* Flat explainer badges: connected concepts, one entrance, no looping motion. */
+.explainer-layout{display:grid;grid-template-columns:56% 44%;align-items:center;gap:1cqw;margin-top:1cqw}
+.explainer{margin:0;padding:0 1cqw 0 0;min-width:0}
+.explainer-map{height:29cqw;position:relative}
+.explainer-lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.explainer-lines line{stroke:#9dbca5;stroke-width:.45}
+.explainer-hub{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;width:11cqw;height:8cqw;background:#239b4b;color:white;border-radius:12px;text-align:center;font-size:1.4cqw;line-height:1.2;padding:1cqw}
+.explainer-hub>span{font-size:2.3cqw;margin-bottom:.4cqw}
+.explainer-node{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:flex;align-items:center;flex-direction:column;text-align:center;width:13cqw;background:#f5f5f3;border-radius:8px;padding:.45cqw;animation:badge-appear 400ms ease-out var(--delay) backwards}
+.icon-badge{display:grid;place-items:center;width:3.5cqw;height:3.5cqw;border-radius:50%;background:#deece1;color:#176c34;border:1px solid #a7cdb2;margin-bottom:.4cqw}
+.icon-badge svg{width:2.1cqw;height:2.1cqw}
+.explainer-node strong{font-size:1.45cqw;line-height:1.25}
+.explainer-node>span:last-child{font-size:1.05cqw;line-height:1.3;margin-top:.3cqw}
+.explainer figcaption{font-size:1.1cqw;line-height:1.4;text-align:center;color:#3d5946;margin:1cqw 0 0}
+.explainer-copy{padding:0 1cqw 0 1.5cqw;border-left:1px solid #b6c8bb}
+.explainer-copy h2{font-size:1.8cqw;line-height:1.25;color:#217a3d;margin:0 0 1.3cqw}
+.slide-content .explainer-copy ul{font-size:1.5cqw;line-height:1.45;padding-left:1.8cqw}
+.slide-content .explainer-copy li{margin:1.1cqw 0}
+.explainer-copy .tools{flex-wrap:wrap;gap:.5cqw}
+.explainer-copy .tools span{font-size:1.1cqw}
+@keyframes badge-appear{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+@media screen and (max-width:800px){
+ .explainer-layout{grid-template-columns:1fr;gap:28px;margin-top:20px}
+ .explainer{padding:0}.explainer-map{height:auto;display:grid;gap:14px;padding-left:16px;border-left:2px solid #9dbca5}
+ .explainer-lines{display:none}.explainer-hub,.explainer-node{position:relative;left:auto;top:auto;transform:none;width:100%;height:auto;animation:none}
+ .explainer-hub{flex-direction:row;gap:12px;justify-content:flex-start;padding:18px;font-size:20px}
+ .explainer-hub>span{font-size:28px;margin:0}
+ .explainer-node{display:grid;grid-template-columns:48px 1fr;text-align:left;gap:4px 14px;padding:12px;border:1px solid #c7d8cb}
+ .icon-badge{grid-row:1/3;width:46px;height:46px;margin:0}.icon-badge svg{width:26px;height:26px}
+ .explainer-node strong{font-size:19px}.explainer-node>span:last-child{font-size:17px;margin:0}
+ .explainer figcaption{font-size:16px;text-align:left;margin-top:18px}
+ .explainer-copy{padding:24px 0 0;border-left:0;border-top:1px solid #b6c8bb}
+ .explainer-copy h2{font-size:23px;margin:0 0 18px}
+ .slide-content .explainer-copy ul{font-size:18px;padding-left:26px;line-height:1.6}
+ .slide-content .explainer-copy li{margin:13px 0}
+ .explainer-copy .tools{gap:8px}.explainer-copy .tools span{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.explainer-node{animation:none}}
+
+/* The workflow follows the outer circle from Plan to Deploy. */
+@media screen and (max-width:800px){
+ .explainer-cycle .explainer-node:not(:last-child)::after{content:"↓";position:absolute;bottom:-16px;left:34px;color:#239b4b;font-size:20px;line-height:16px;z-index:1}
+}
+
+/* Deployment is a sequence, not a hub: exactly three connected steps. */
+.publishing-steps{display:flex;flex-direction:column;gap:3cqw;padding:1cqw 2cqw}
+.publishing-step{position:relative;display:flex;align-items:center;gap:1.4cqw;padding:1.3cqw 1.5cqw;background:#e4eee6;border:1px solid #b2cdb9;border-radius:10px}
+.publishing-step .icon-badge{flex-shrink:0;margin:0}
+.publishing-step>div{display:flex;flex-direction:column;gap:.35cqw}
+.publishing-step strong{font-size:1.8cqw;line-height:1.2}
+.publishing-step>div>span{font-size:1.2cqw;line-height:1.35}
+.publishing-step small{margin-left:auto;font-size:1.1cqw;color:#497556}
+.publishing-arrow{position:absolute;left:50%;top:100%;transform:translateX(-50%);height:3cqw;display:grid;place-items:center;font-size:2.6cqw;line-height:1;color:#239b4b}
+@media screen and (max-width:800px){
+ .publishing-steps{gap:36px;padding:0}
+ .publishing-step{gap:14px;padding:18px 14px}
+ .publishing-step strong{font-size:21px}
+ .publishing-step>div>span{font-size:17px}
+ .publishing-step small{font-size:14px}
+ .publishing-arrow{height:36px;font-size:30px}
+}
+
+/* A gentle lift makes diagram steps feel tangible without implying a click. */
+.explainer-node,.publishing-step{transition:translate 180ms ease,box-shadow 180ms ease,background-color 180ms ease,outline-color 180ms ease;outline:2px solid transparent;outline-offset:3px}
+.explainer-node .icon-badge,.publishing-step .icon-badge{transition:scale 180ms ease,background-color 180ms ease,color 180ms ease}
+.explainer-node:focus-visible,.publishing-step:focus-visible{outline-color:#239b4b;background:#edf5ef;box-shadow:0 8px 20px #1b65351c;translate:0 -4px}
+.explainer-node:focus-visible .icon-badge,.publishing-step:focus-visible .icon-badge{scale:1.08;background:#239b4b;color:white}
+@media(hover:hover) and (pointer:fine){
+ .explainer-node:hover,.publishing-step:hover{outline-color:#87bd97;background:#edf5ef;box-shadow:0 8px 20px #1b65351c;translate:0 -4px}
+ .explainer-node:hover .icon-badge,.publishing-step:hover .icon-badge{scale:1.08;background:#239b4b;color:white}
+}
+@media(prefers-reduced-motion:reduce){
+ .explainer-node,.publishing-step,.explainer-node .icon-badge,.publishing-step .icon-badge{transition:none}
+ .explainer-node:hover,.publishing-step:hover,.explainer-node:focus-visible,.publishing-step:focus-visible{translate:none}
+ .explainer-node:hover .icon-badge,.publishing-step:hover .icon-badge,.explainer-node:focus-visible .icon-badge,.publishing-step:focus-visible .icon-badge{scale:1}
+}
+
+/* Slide entrance: establish the title, then reveal supporting content once. */
+@media screen and (prefers-reduced-motion:no-preference){
+ .slide{animation:slide-arrive 340ms cubic-bezier(.2,.7,.2,1) backwards}
+ .slide .program-label,.slide .eyebrow{animation:content-arrive 400ms ease-out 70ms backwards}
+ .slide h1{animation:content-arrive 520ms cubic-bezier(.16,1,.3,1) 120ms backwards}
+ .slide li{animation:content-arrive 430ms cubic-bezier(.2,.7,.2,1) 230ms backwards}
+ .slide li:nth-child(2){animation-delay:280ms}
+ .slide li:nth-child(3){animation-delay:330ms}
+ .slide li:nth-child(4){animation-delay:380ms}
+ .slide li:nth-child(5){animation-delay:430ms}
+ .slide li:nth-child(6){animation-delay:480ms}
+ .slide li:nth-child(n+7){animation-delay:530ms}
+ .slide .speaker-photo{animation:portrait-arrive 650ms cubic-bezier(.16,1,.3,1) 160ms backwards}
+ .slide .cover-speaker{animation:content-arrive 450ms ease-out 80ms backwards}
+ .slide .cover-rule{transform-origin:left;animation:rule-arrive 600ms cubic-bezier(.16,1,.3,1) 260ms backwards}
+ .slide .cover-logos img{animation:content-arrive 450ms ease-out 400ms backwards}
+ .slide .cover-logos img:nth-child(2){animation-delay:470ms}
+ .slide .cover-logos img:nth-child(3){animation-delay:540ms}
+ .slide .cover-meta,.slide .cover-date,.slide .slide-footer{animation:content-arrive 430ms ease-out 440ms backwards}
+ .slide .program-intro>div,.slide .program-intro aside,.slide .program-purpose{animation:content-arrive 520ms ease-out 200ms backwards}
+ .slide .program-intro aside{animation-delay:320ms}
+ .slide .program-purpose{animation-delay:440ms}
+ .slide .explainer-hub{animation:hub-arrive 500ms ease-out 180ms backwards}
+ .slide .explainer-node{animation-delay:calc(220ms + var(--delay))}
+ .slide .explainer-lines{animation:connections-arrive 600ms ease-out 340ms backwards}
+ .slide .publishing-step{animation:content-arrive 480ms cubic-bezier(.16,1,.3,1) 230ms backwards}
+ .slide .publishing-step:nth-child(2){animation-delay:370ms}
+ .slide .publishing-step:nth-child(3){animation-delay:510ms}
+ .slide .explainer figcaption,.slide .tools,.slide .explainer-copy h2{animation:content-arrive 450ms ease-out 300ms backwards}
+ .slide .quiz{animation:content-arrive 450ms ease-out 550ms backwards}
+}
+@keyframes slide-arrive{from{opacity:.35}to{opacity:1}}
+@keyframes content-arrive{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes portrait-arrive{from{opacity:0;scale:.96}to{opacity:1;scale:1}}
+@keyframes rule-arrive{from{opacity:0;scale:.8 1}to{opacity:1;scale:1 1}}
+@keyframes hub-arrive{from{opacity:0;scale:.95}to{opacity:1;scale:1}}
+@keyframes connections-arrive{from{opacity:0}to{opacity:1}}
+@media screen and (max-width:800px) and (prefers-reduced-motion:no-preference){
+ .slide .explainer-node{animation:content-arrive 400ms ease-out calc(220ms + var(--delay)) backwards}
+}
+@media(prefers-reduced-motion:reduce){.slide,.slide *{animation:none!important}}
+@media print{.slide,.slide *{animation:none!important}}
