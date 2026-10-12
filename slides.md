@@ -1,4 +1,4 @@
-# AI in Practice: Design, Build and Deploy your Personal Website & Portfolio
+# AI in Practice: Design, Build and Deploy your Personal Website & Portfolio — Without Coding
 
 English slide content | 7.77 Program online session | 15 October 2026
 
@@ -8,7 +8,7 @@ Session tools: use **Gemini and Antigravity free accounts throughout the AI work
 
 Presenter preparation: deliver explanations in Algerian Darja, retaining English technical terms. Use the official 7.77 template when producing the presentation. These preparation notes are not projected slide content. The program introduction below summarizes the supplied official template; confirm its wording with Souad before final export. Omit the template's center count until confirmed. Use the selected portrait on slide 3; select the final short biography and public contact details separately.
 
-## 1. AI in Practice: Design, Build and Deploy your Personal Website & Portfolio
+## 1. AI in Practice: Design, Build and Deploy your Personal Website & Portfolio — Without Coding
 
 - 7.77 Program | Online Session
 - Mahfoudh Arous

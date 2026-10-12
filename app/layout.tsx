@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
+import "./closing-slide.css";
 const title = "AI in Practice: Personal Website & Portfolio | 7.77";
 const description = "Learn to design, build and deploy a personal website with Gemini, Antigravity and GitHub Pages. English slides by Mahfoudh Arous, 15 October 2026.";
 const image = siteUrl ? new URL("session/social-preview.png", siteUrl).href : undefined;
