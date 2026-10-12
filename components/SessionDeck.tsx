@@ -56,8 +56,15 @@ export default function SessionDeck() {
             <div className="explainer-copy">
               {index === 5 ? <><div className="tools"><span>Gemini · Free account</span><span>Antigravity · Free account</span></div><ul><li>Gemini: plan the page, write copy and guide the design.</li><li>Antigravity: build, preview and improve.</li><li>AI produces a draft. You check the result.</li></ul></> : index === 6 ? <><h2>Before you press Send</h2><ul><li>Give AI a specific audience and goal.</li><li>Ask for the format you need.</li><li>Use supplied facts and mark missing details.</li></ul></> : <><h2>Different stages, different evidence</h2><ul><li>A local preview stays on your device.</li><li>A GitHub repository holds the source.</li><li>GitHub Pages publishes the website.</li><li>Open the public URL to verify success.</li><li>Upload reviewed files; never upload secrets.</li></ul></>}
             </div>
+          </div> : index === 9 ? <div className="quiz-layout">
+            <p className="quiz-goal">Which prompt best reduces invented professional claims?</p>
+            <ol className="quiz-options" aria-label="Answer choices">
+              {slide.bullets.slice(1,4).map((b,i) => <li key={b} className={answer && i === 1 ? "is-correct" : ""}><span className="quiz-letter">{"ABC"[i]}</span><span>{b.slice(3)}{answer && i === 1 && <strong className="correct-label">Correct answer</strong>}</span></li>)}
+            </ol>
+            <div className="quiz-actions"><p>Vote A, B or C in the poll or chat.</p><button onClick={() => setAnswer(!answer)} aria-expanded={answer} aria-controls="quiz-explanation">{answer ? "Hide answer" : "Reveal answer"}</button></div>
+            <div id="quiz-explanation" className="quiz-explanation" aria-live="polite">{answer ? <p><strong>B is the best choice.</strong> Clear limits reduce invention, but do not guarantee accuracy. Check every professional claim against the source.</p> : <p>Discuss after voting: what should you still check in the answer?</p>}</div>
           </div> : <ul className={index===7 ? "compact" : ""}>{slide.bullets.map(b => <li key={b}>{b}</li>)}</ul>}
-          {index === 9 && <div className="quiz"><button onClick={() => setAnswer(!answer)} aria-expanded={answer}>{answer ? "Hide answer" : "Reveal answer"}</button>{answer && <p><b>B.</b> Use only supplied facts and mark missing information. Still check the answer.</p>}</div>}
+
         </div>}
       </>}
       <div className="slide-footer"><span>{index===0 ? "English slides · Darja delivery" : "AI in Practice · October 15, 2026"}</span><span>{String(index+1).padStart(2,"0")} / {slides.length}</span></div>

@@ -206,3 +206,33 @@
 }
 @media(prefers-reduced-motion:reduce){.slide,.slide *{animation:none!important}}
 @media print{.slide,.slide *{animation:none!important}}
+
+/* Quiz: separate question, equal answer choices, and a stable reveal area. */
+.quiz-goal{font-size:1.65cqw;line-height:1.35;margin:0 0 1.2cqw}
+.slide-content .quiz-options{list-style:none;padding:0;margin:0;display:grid;gap:.8cqw}
+.slide-content .quiz-options li{display:flex;align-items:center;gap:1.2cqw;padding:.9cqw 1.2cqw;margin:0;border:1px solid #bdcec2;border-radius:10px;background:#fafbf8;font-size:1.55cqw;line-height:1.35;min-height:4.2cqw}
+.quiz-letter{display:grid;place-items:center;flex-shrink:0;width:2.5cqw;height:2.5cqw;border-radius:50%;background:#e1ece3;color:#196e35;font-weight:750}
+.slide-content .quiz-options li.is-correct{border:2px solid #239b4b;background:#e4f2e7}
+.correct-label{display:block;font-size:1cqw;color:#176c34;margin-top:.25cqw}
+.quiz-actions{display:flex;align-items:center;justify-content:space-between;gap:1cqw;margin-top:1cqw;font-size:1.2cqw}
+.quiz-actions p{margin:0}
+.quiz-actions button{min-height:40px;padding:.6cqw 1.2cqw;border:1px solid #239b4b;border-radius:8px;background:#239b4b;color:white;white-space:nowrap}
+.quiz-explanation{min-height:5cqw;padding:.8cqw 1.1cqw;margin-top:.8cqw;border-left:3px solid #239b4b;background:#eaf0e9;font-size:1.25cqw;line-height:1.4}
+.quiz-explanation p{margin:0}
+@media screen and (max-width:800px){
+ .quiz-goal{font-size:20px;margin:0 0 20px}
+ .slide-content .quiz-options{gap:12px}
+ .slide-content .quiz-options li{padding:16px;gap:14px;font-size:18px;align-items:flex-start;min-height:0}
+ .quiz-letter{width:34px;height:34px}.correct-label{font-size:15px;margin-top:8px}
+ .quiz-actions{flex-wrap:wrap;gap:14px;margin-top:20px;font-size:17px}
+ .quiz-actions button{min-height:46px;padding:10px 18px}
+ .quiz-explanation{min-height:0;margin-top:18px;padding:16px;font-size:17px}
+}
+
+/* Local open-source substitute for the template's Codec Pro Bold. */
+@font-face{font-family:"Plus Jakarta Sans";src:url("/session/fonts/PlusJakartaSans-Variable.ttf") format("truetype");font-weight:200 800;font-style:normal;font-display:swap}
+body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weight:500}
+.slide h1,.cover-speaker,.program-label,.speaker-layout h1{font-weight:700}
+.cover-title{letter-spacing:-.04em}
+.cover-title span{letter-spacing:-.035em}
+.print-slide h1{font-weight:700}
