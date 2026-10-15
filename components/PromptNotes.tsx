@@ -70,9 +70,23 @@ export default function PromptNotes({ printing = false }: { printing?: boolean }
           </div>
         </details>
         {!printing && <button type="button" className={`prompt-copy${copied === i ? " is-copied" : ""}`} onClick={e => copy(i, e.currentTarget)} aria-label={`Copy prompt: ${p.title}`}>
-          <span aria-live="polite">{copied === i ? "Copied ✓" : failed === i ? "Press Ctrl+C" : "Copy"}</span>
+          {copied === i ? <CheckIcon/> : <CopyIcon/>}
+          <span aria-live="polite">{copied === i ? "Copied" : failed === i ? "Press Ctrl+C" : "Copy"}</span>
         </button>}
       </li>)}
     </ol>
   </div>;
+}
+
+function CopyIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="9" y="9" width="12" height="12" rx="2"/>
+    <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/>
+  </svg>;
+}
+
+function CheckIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M20 6 9 17l-5-5"/>
+  </svg>;
 }

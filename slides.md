@@ -21,7 +21,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 
 - Mahfoudh Arous
 - Senior Software Engineer & Mentor
-- Builds production web & mobile apps, including DonateBlood, a blood-donor platform used by a charity in Algeria
+- Builds production web & mobile apps, including DonateBlood, a blood-donor platform used by a charity in Algeria, and is currently creating Code Craft, an interactive, gamified platform to learn programming through code labs
 - Open-source contributor to the Arabic translation of the official React documentation
 - Creates videos on AI and software development in Arabic, French and English
 - Speaker at 7.77 (Chlef), University of Chlef Science Day, Algeria 2.0 and GDG I/O Extended

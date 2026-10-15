@@ -21,6 +21,8 @@
 .prompt-tool.tool-antigravity{border-color:#c3c9ec;color:#3842a0;background:#eef0fb}
 .prompt-tool.tool-any{border-color:#d9cfb8;color:#6b5418;background:#f8f4ea}
 .prompt-copy{position:absolute;top:.85cqw;right:1.1cqw;min-height:40px;min-width:7.5cqw;padding:.45cqw 1cqw;border:1px solid #239b4b;border-radius:8px;background:#239b4b;color:white;font-size:1.05cqw;font-weight:700;white-space:nowrap;transition:background 150ms}
+.prompt-copy{display:inline-flex;align-items:center;justify-content:center;gap:.45cqw}
+.prompt-copy svg{width:1.15cqw;height:1.15cqw;flex-shrink:0}
 .prompt-copy:hover{background:#1e7d3c}
 .prompt-copy.is-copied{background:#e4f2e7;color:#176c34}
 .prompt-body{padding:0 1.2cqw 1.2cqw 5.2cqw}
@@ -44,7 +46,7 @@
  .prompt-number{width:32px;height:32px;font-size:14px}
  .prompt-heading{flex-basis:calc(100% - 62px);font-size:17px}.prompt-heading small{font-size:11px}
  .prompt-tool{margin-left:61px;font-size:12px;padding:4px 10px}
- .prompt-copy{top:12px;right:10px;min-width:96px;font-size:14px;padding:8px 14px}
+ .prompt-copy{top:12px;right:10px;min-width:96px;gap:6px;font-size:14px;padding:8px 14px}.prompt-copy svg{width:16px;height:16px}
  .prompt-body{padding:0 12px 14px}
  .prompt-tip{font-size:15px;padding:10px 12px;margin-bottom:10px}
  .prompt-body pre{font-size:14px;padding:14px}
