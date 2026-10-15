@@ -2,7 +2,7 @@
 
 15 October 2026 · 7.77 online session · 19:30–20:45 (Algiers)
 
-Companion to the public repository https://github.com/aladin002dz/777-ai-in-practice-slides, source `lib/session-slides.json` (21 slides). The local checkout folder is named `workshop-practical-ai-slides-ii`. Prepared examples for rehearsal; these prompts and skill templates have not been run or installed. English is the copy-and-paste master; you can explain each step aloud in Darja. Replace bracketed fields before use.
+Companion to the public repository https://github.com/aladin002dz/777-ai-in-practice-slides, source `lib/session-slides.json` (22 slides). The local checkout folder is named `workshop-practical-ai-slides-ii`. Prepared examples for rehearsal; these prompts and skill templates have not been run or installed. English is the copy-and-paste master; you can explain each step aloud in Darja. Replace bracketed fields before use.
 
 ## 1. Presenter route
 
@@ -16,8 +16,9 @@ Companion to the public repository https://github.com/aladin002dz/777-ai-in-prac
 | 15 | Design and build | Prompts 3 and 4 |
 | 16 | Review and improve | Prompts 5 and 6 |
 | 17 | Git, GitHub and deployment | Prompt 7: prepare a walkthrough |
-| 18 | Ten-minute challenge | Participant template and fictional examples |
-| 19–21 | Next steps | Reuse the checklist and review before sharing |
+| 18 | Git and GitHub commands | `git init`, `git add .`, `git commit -m`, `git push`; GitHub hosts the code, Pages gives the public URL |
+| 19 | Ten-minute challenge | Participant template and fictional examples |
+| 20–22 | Next steps | Reuse the checklist and review before sharing |
 
 Use one design direction and one useful revision. Prepare source text, approved copy and a working local page before the session. At about 60 seconds without a usable generation, say “This is the prepared checkpoint” and open the corresponding saved result. Keep the activity at 20:25 and Q&A at 20:35. No account creation or installation during the demonstration. Complete the brief review and one revision by 20:15 within the build block; reserve 20:15–20:25 for GitHub and deployment. Switch to Checkpoint B if needed.
 
@@ -188,7 +189,7 @@ description: Review a small static website for source fidelity and basic usabili
 
 Invocation example: “Use the website review coach instructions to compare this local page with the approved copy. Report findings first; do not edit.”
 
-## 6. Participant challenge (slide 18)
+## 6. Participant challenge (slide 19)
 
 Timing: 2 minutes for audience and goal, 4 minutes to write, 3 minutes for two volunteer examples, 1 minute to improve. Paper or chat is sufficient. Paste the template into chat at 20:25. Beginners may complete only Context, Task and one Constraint, keeping the supplied Role and Format, or adapt Lina, Karim or Nour Bakery. Completing all five fields from scratch is optional.
 

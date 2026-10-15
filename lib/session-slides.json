@@ -181,6 +181,18 @@
     ]
   },
   {
+    "title": "Git & GitHub: Save, Share and Publish Your Code",
+    "bullets": [
+      "`git init` | Start tracking your project folder (once per project)",
+      "`git add .` | Stage all changed files for the next save",
+      "`git commit -m \"message\"` | Save a snapshot with a short description",
+      "`git push` | Send your saved commits to GitHub",
+      "GitHub | Hosts your code online: github.com/username/my-website",
+      "Public URL | GitHub Pages publishes the site: username.github.io/my-website",
+      "First push only: connect your GitHub repository with `git remote add origin <repository URL>`"
+    ]
+  },
+  {
     "title": "Mini Challenge: Write Your Website Brief",
     "bullets": [
       "Choose: portfolio, service page or small-business website",

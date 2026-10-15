@@ -6,7 +6,7 @@ import QrCode from "./QrCode";
 import { renderInline } from "@/lib/inlineMarkdown";
 import slides from "@/lib/session-slides.json";
 
-const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Quiz", "Skills & Gems", "Live demo", "Design & build", "Review", "Deploy", "Activity", "What’s next", "Q&A", "Stay connected"];
+const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Quiz", "Skills & Gems", "Live demo", "Design & build", "Review", "Deploy", "Git & GitHub", "Activity", "What’s next", "Q&A", "Stay connected"];
 
 export default function SessionDeck() {
   const [index, setIndex] = useState(0);
@@ -79,6 +79,9 @@ export default function SessionDeck() {
           </div> : index === 7 ? <div className="examples-layout">
             <ol className="examples">{slide.bullets.slice(0,3).map((b,i) => {const [who, before, after] = b.split(" | ");return <li key={b}><span className="quiz-letter">{"ABC"[i]}</span><h2>{who}</h2><p className="before">{before}</p><span className="examples-arrow" aria-hidden="true">↓</span><p className="after">{after}</p></li>;})}</ol>
             <p className="examples-note">{slide.bullets[3]}.</p>
+          </div> : index === 17 ? <div className="git-layout">
+            <ol className="git-terminal" aria-label="Git commands">{slide.bullets.slice(0,4).map(b => {const [cmd, what] = b.split(" | ");return <li key={b}>{renderInline(cmd)}<span>{what}</span></li>;})}</ol>
+            <div className="git-host">{slide.bullets.slice(4,6).map(b => {const [name, what] = b.split(" | ");const [label, url] = what.split(": ");return <div key={b}><h2>{name}</h2><p>{label}</p><strong>{url}</strong></div>;})}<p className="git-note">{renderInline(slide.bullets[6])}</p></div>
           </div> : index === 10 ? <div className="brief-compare">
             <h2>Vague request <small>Example</small></h2>
             <p className="brief-vague">{renderInline(slide.bullets[0].replace(/^Vague: /, ""))}</p>

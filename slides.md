@@ -156,7 +156,17 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Protect existing websites and never upload secrets or private files
 - No terminal needed for this route; use a separate project repository
 
-## 18. Mini Challenge: Write Your Website Brief
+## 18. Git & GitHub: Save, Share and Publish Your Code
+
+- `git init` | Start tracking your project folder (once per project)
+- `git add .` | Stage all changed files for the next save
+- `git commit -m "message"` | Save a snapshot with a short description
+- `git push` | Send your saved commits to GitHub
+- GitHub | Hosts your code online: github.com/username/my-website
+- Public URL | GitHub Pages publishes the site: username.github.io/my-website
+- First push only: connect your GitHub repository with `git remote add origin <repository URL>`
+
+## 19. Mini Challenge: Write Your Website Brief
 
 - Choose: portfolio, service page or small-business website
 - 2 minutes: identify your audience and the action visitors should take
@@ -166,7 +176,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - 1 minute: choose one improvement to your brief
 - Use chat or paper; no account or installation is required
 
-## 19. What’s Next? Topics to Explore
+## 20. What’s Next? Topics to Explore
 
 - Connectors: give AI access to selected documents and tools with your permission
 - MCP (Model Context Protocol): a standard for connecting AI applications to tools and data
@@ -175,7 +185,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Custom domains, search visibility and analytics: help people find and use your website
 - Choose one topic to explore after you build and review your first page
 
-## 20. Questions & Your Next Step
+## 21. Questions & Your Next Step
 
 - What would you like to clarify about prompting, building or deployment?
 - Start with one audience, one goal and one simple page
@@ -183,7 +193,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Test the website before sharing its link
 - Continue with the session's prompts, activity and example files
 
-## 21. Keep Learning, Keep Building
+## 22. Keep Learning, Keep Building
 
 - Thank you for taking part in the 7.77 session.
 - Official 7.77 Program: https://skillscenter.algerietelecom.dz/programs/777-program
