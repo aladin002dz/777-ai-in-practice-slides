@@ -79,7 +79,12 @@ export default function SessionDeck() {
           </div> : index === 7 ? <div className="examples-layout">
             <ol className="examples">{slide.bullets.slice(0,3).map((b,i) => {const [who, before, after] = b.split(" | ");return <li key={b}><span className="quiz-letter">{"ABC"[i]}</span><h2>{who}</h2><p className="before">{before}</p><span className="examples-arrow" aria-hidden="true">↓</span><p className="after">{after}</p></li>;})}</ol>
             <p className="examples-note">{slide.bullets[3]}.</p>
-          </div> : <ul className={index===10 ? "compact" : ""}>{slide.bullets.map(b => <li key={b}>{renderInline(b)}</li>)}</ul>}
+          </div> : index === 10 ? <div className="brief-compare">
+            <h2>Vague request <small>Example</small></h2>
+            <p className="brief-vague">{renderInline(slide.bullets[0].replace(/^Vague: /, ""))}</p>
+            <h2>RCTFC brief <small>Example</small></h2>
+            <ul className="compact">{slide.bullets.slice(1).map(b => <li key={b}>{renderInline(b)}</li>)}</ul>
+          </div> : <ul>{slide.bullets.map(b => <li key={b}>{renderInline(b)}</li>)}</ul>}
 
         </div>}
       </>}

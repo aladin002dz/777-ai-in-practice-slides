@@ -306,3 +306,4 @@ body{font-family:"Plus Jakarta Sans","Century Gothic",Arial,sans-serif;font-weig
  .slide-content .examples li{padding:18px}.examples h2{font-size:21px;margin:10px 0 12px}.examples p{font-size:17px;padding:10px 12px}.examples-arrow{font-size:22px;margin:6px 0}.examples-note{font-size:16px;margin-top:18px}
 }
 .slide-content li strong{color:var(--green)}
+.brief-compare h2{font-size:1.8cqw;line-height:1.25;color:#217a3d;margin:1.6cqw 0 .8cqw}.brief-compare h2:first-child{margin-top:0}.brief-compare h2 small{margin-left:.8cqw;padding:.2cqw .8cqw;border:1px solid #bed5c0;border-radius:20px;font-size:1cqw;font-weight:600;color:#477453;vertical-align:middle;text-transform:uppercase;letter-spacing:.1em}.brief-vague{margin:0;padding:1cqw 1.4cqw;font-size:1.6cqw;background:#f1e9e2;border-left:3px solid #b9785a}.brief-compare ul.compact{margin-top:0}
