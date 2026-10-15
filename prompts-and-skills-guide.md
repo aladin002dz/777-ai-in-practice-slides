@@ -10,8 +10,8 @@ Companion to the public repository https://github.com/aladin002dz/777-ai-in-prac
 |---|---|---|
 | 7–8 | Poll and everyday examples | Translator, tutor and bakery briefs below |
 | 9–11 | Workflow and RCTFC | Compare the vague request with Prompt 2 |
-| 12 | Skills & Gems | Reusable instructions and the content-planner skill |
-| 13 | Quiz | Ask which instruction reduces invented claims; answer B, then remind participants to verify |
+| 12 | Quiz | Ask which instruction reduces invented claims; answer B, then remind participants to verify |
+| 13 | Skills & Gems | Reusable instructions and the content-planner skill |
 | 14 | Profile to portfolio | Prompt 1, then Prompt 2; approve the copy |
 | 15 | Design and build | Prompts 3 and 4 |
 | 16 | Review and improve | Prompts 5 and 6 |
@@ -38,7 +38,7 @@ CONFIRMED PUBLIC LINK: [paste the exact public LinkedIn or portfolio URL you app
 
 Check: compare every extracted fact with the original, especially dates, roles and project outcomes. Save a corrected fact table as Checkpoint A1.
 
-## 3. Reusable instructions for the live demo (slide 12)
+## 3. Reusable instructions for the live demo (slide 13)
 
 Paste this before the task in a normal Gemini chat, or use it as the instructions of a Gem prepared before rehearsal:
 
@@ -127,7 +127,7 @@ These are proposed custom Skill contents, not installed or tested Antigravity pa
 
 ### Skill A — Approved-facts website planner
 
-Best match for slide 12. Inputs: approved fact table, audience and visitor goal. Output: traceable copy and missing information. Example SKILL.md body:
+Best match for slide 13. Inputs: approved fact table, audience and visitor goal. Output: traceable copy and missing information. Example SKILL.md body:
 
 ```markdown
 ---

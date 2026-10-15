@@ -6,7 +6,7 @@ import QrCode from "./QrCode";
 import { renderInline } from "@/lib/inlineMarkdown";
 import slides from "@/lib/session-slides.json";
 
-const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Skills & Gems", "Quiz", "Live demo", "Design & build", "Review", "Deploy", "Activity", "What’s next", "Q&A", "Stay connected"];
+const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Quiz", "Skills & Gems", "Live demo", "Design & build", "Review", "Deploy", "Activity", "What’s next", "Q&A", "Stay connected"];
 
 export default function SessionDeck() {
   const [index, setIndex] = useState(0);
@@ -59,7 +59,7 @@ export default function SessionDeck() {
             <div className="explainer-copy">
               {index === 8 ? <><div className="tools"><span><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a> · Free account</span><span><a href="https://antigravity.google/download" target="_blank" rel="noopener noreferrer">Antigravity</a> · Free account</span></div><ul><li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini <span aria-hidden="true">↗</span></a>: plan the page, write copy and guide the design.</li><li><a href="https://antigravity.google/download" target="_blank" rel="noopener noreferrer">Antigravity <span aria-hidden="true">↗</span></a>: build, preview and improve.</li><li>AI produces a draft. You check the result.</li></ul></> : index === 9 ? <><h2>Before you press Send</h2><ul><li>Give AI a specific audience and goal.</li><li>Ask for the format you need.</li><li>Use supplied facts and mark missing details.</li></ul></> : <><h2>Different stages, different evidence</h2><ul><li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">Git <span aria-hidden="true">↗</span></a> saves local versions — optional for today’s browser route.</li><li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a> hosts your source repository online.</li><li>Browser route: Add file → Upload files; add index.html and style.css to a separate project repository.</li><li>Settings → Pages: deploy from your branch and root folder. No terminal needed.</li><li>Check deployment status, then open and test your public website.</li><li>Upload reviewed files; never upload secrets.</li></ul></>}
             </div>
-          </div> : index === 12 ? <div className="quiz-layout">
+          </div> : index === 11 ? <div className="quiz-layout">
             <p className="quiz-goal">Which prompt best reduces invented professional claims?</p>
             <ol className="quiz-options" aria-label="Answer choices">
               {slide.bullets.slice(1,4).map((b,i) => <li key={b} className={answer && i === 1 ? "is-correct" : ""}><span className="quiz-letter">{"ABC"[i]}</span><span>{b.slice(3)}{answer && i === 1 && <strong className="correct-label">Correct answer</strong>}</span></li>)}

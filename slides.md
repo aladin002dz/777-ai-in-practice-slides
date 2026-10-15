@@ -101,15 +101,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Constraints: "Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details."
 - Bonus — Example: "Match the tone of this short sample: [paste 2–3 lines you like]. Follow its style, not its content."
 
-## 12. Reuse Your Instructions: Skills & Gems
-
-- Save a short instruction checklist for tasks you repeat
-- Example: "Use approved facts, write concise copy, flag missing information and check the result."
-- Builder equivalent: a Skill packages reusable instructions and resources
-- Save your checklist in a note or a Gemini Gem
-- Reuse the same checklist when you draft another website brief
-
-## 13. Quick Quiz: Which Instruction Helps Most?
+## 12. Quick Quiz: Which Instruction Helps Most?
 
 - Goal: reduce invented professional claims
 - A: "Make my profile sound impressive."
@@ -117,6 +109,14 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - C: "Add convincing client testimonials."
 - Vote A, B or C in the poll or chat
 - Discuss: what should you still check in the AI's answer?
+
+## 13. Reuse Your Instructions: Skills & Gems
+
+- Save a short instruction checklist for tasks you repeat
+- Example: "Use approved facts, write concise copy, flag missing information and check the result."
+- Builder equivalent: a Skill packages reusable instructions and resources
+- Save your checklist in a note or a Gemini Gem
+- Reuse the same checklist when you draft another website brief
 
 ## 14. Live Demo: From My LinkedIn Profile to My Portfolio
 

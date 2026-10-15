@@ -114,16 +114,6 @@
     ]
   },
   {
-    "title": "Reuse Your Instructions: Skills & Gems",
-    "bullets": [
-      "Save a short instruction checklist for tasks you repeat",
-      "Example: \"Use approved facts, write concise copy, flag missing information and check the result.\"",
-      "Builder equivalent: a Skill packages reusable instructions and resources",
-      "Save your checklist in a note or a Gemini Gem",
-      "Reuse the same checklist when you draft another website brief"
-    ]
-  },
-  {
     "title": "Quick Quiz: Which Instruction Helps Most?",
     "bullets": [
       "Goal: reduce invented professional claims",
@@ -132,6 +122,16 @@
       "C: \"Add convincing client testimonials.\"",
       "Vote A, B or C in the poll or chat",
       "Discuss: what should you still check in the AI's answer?"
+    ]
+  },
+  {
+    "title": "Reuse Your Instructions: Skills & Gems",
+    "bullets": [
+      "Save a short instruction checklist for tasks you repeat",
+      "Example: \"Use approved facts, write concise copy, flag missing information and check the result.\"",
+      "Builder equivalent: a Skill packages reusable instructions and resources",
+      "Save your checklist in a note or a Gemini Gem",
+      "Reuse the same checklist when you draft another website brief"
     ]
   },
   {
