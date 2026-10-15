@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import ExplainerDiagram from "./ExplainerDiagram";
 import QrCode from "./QrCode";
+import { renderInline } from "@/lib/inlineMarkdown";
 import slides from "@/lib/session-slides.json";
 
 const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Skills & Gems", "Quiz", "Live demo", "Design & build", "Review", "Deploy", "Activity", "Q&A", "Stay connected"];
@@ -78,7 +79,7 @@ export default function SessionDeck() {
           </div> : index === 7 ? <div className="examples-layout">
             <ol className="examples">{slide.bullets.slice(0,3).map((b,i) => {const [who, before, after] = b.split(" | ");return <li key={b}><span className="quiz-letter">{"ABC"[i]}</span><h2>{who}</h2><p className="before">{before}</p><span className="examples-arrow" aria-hidden="true">↓</span><p className="after">{after}</p></li>;})}</ol>
             <p className="examples-note">{slide.bullets[3]}.</p>
-          </div> : <ul className={index===10 ? "compact" : ""}>{slide.bullets.map(b => <li key={b}>{b}</li>)}</ul>}
+          </div> : <ul className={index===10 ? "compact" : ""}>{slide.bullets.map(b => <li key={b}>{renderInline(b)}</li>)}</ul>}
 
         </div>}
       </>}
