@@ -109,7 +109,8 @@
       "Context: \"Use Mahfoudh Arous’s public LinkedIn profile as the source for his personal website and portfolio.\"",
       "Task: \"Draft a concise one-page personal website and portfolio outline.\"",
       "Format: \"Return a table of sections and suggested copy.\"",
-      "Constraints: \"Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details.\""
+      "Constraints: \"Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details.\"",
+      "Bonus — Example: \"Match the tone of this short sample: [paste 2–3 lines you like]. Follow its style, not its content.\""
     ]
   },
   {

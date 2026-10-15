@@ -99,6 +99,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Task: "Draft a concise one-page personal website and portfolio outline."
 - Format: "Return a table of sections and suggested copy."
 - Constraints: "Use only supplied facts. Mark missing information. Do not invent credentials, clients or contact details."
+- Bonus — Example: "Match the tone of this short sample: [paste 2–3 lines you like]. Follow its style, not its content."
 
 ## 12. Reuse Your Instructions: Skills & Gems
 
