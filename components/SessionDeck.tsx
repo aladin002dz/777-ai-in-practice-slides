@@ -82,6 +82,9 @@ export default function SessionDeck() {
           </div> : index === 17 ? <div className="git-layout">
             <ol className="git-terminal" aria-label="Git commands">{slide.bullets.slice(0,4).map(b => {const [cmd, what] = b.split(" | ");return <li key={b}>{renderInline(cmd)}<span>{what}</span></li>;})}</ol>
             <div className="git-host">{slide.bullets.slice(4,6).map(b => {const [name, what] = b.split(" | ");const [label, url] = what.split(": ");return <div key={b}><h2>{name}</h2><p>{label}</p><strong>{url}</strong></div>;})}<p className="git-note">{renderInline(slide.bullets[6])}</p></div>
+          </div> : index === 19 ? <div className="next-layout">
+            <ol className="next-cards">{slide.bullets.slice(0,-1).map(b => {const [topic, why, step] = b.split(" | ");return <li key={b}><h2>{topic}</h2><p>{why}</p><p className="next-step"><strong>Try:</strong> {step}</p></li>;})}</ol>
+            <p className="next-note">{renderInline(slide.bullets[slide.bullets.length-1])}</p>
           </div> : index === 10 ? <div className="brief-compare">
             <h2>Vague request <small>Example</small></h2>
             <p className="brief-vague">{renderInline(slide.bullets[0].replace(/^Vague: /, ""))}</p>

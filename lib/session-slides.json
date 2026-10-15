@@ -205,14 +205,13 @@
     ]
   },
   {
-    "title": "What’s Next? Topics to Explore",
+    "title": "What’s Next? Level Up Your Website",
     "bullets": [
-      "Connectors: give AI access to selected documents and tools with your permission",
-      "MCP (Model Context Protocol): a standard for connecting AI applications to tools and data",
-      "Automations: turn a useful AI task into a repeatable workflow",
-      "Working forms and databases: collect messages and store information",
-      "Custom domains, search visibility and analytics: help people find and use your website",
-      "Choose one topic to explore after you build and review your first page"
+      "SEO optimization | Help people find your page on Google | Ask AI for a better page title and description",
+      "Accessibility & performance audit | Make your page usable and fast for everyone | Run Lighthouse in Chrome, then ask AI to fix the top issues",
+      "MCP & Connectors | Let AI work inside your other tools | Connect Canva and create a design from the chat",
+      "Automation | Let AI repeat a task for you | Schedule a task to run every week",
+      "Pick one, try it this week, then share your link"
     ]
   },
   {

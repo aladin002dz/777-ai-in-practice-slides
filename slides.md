@@ -176,14 +176,13 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - 1 minute: choose one improvement to your brief
 - Use chat or paper; no account or installation is required
 
-## 20. What’s Next? Topics to Explore
+## 20. What’s Next? Level Up Your Website
 
-- Connectors: give AI access to selected documents and tools with your permission
-- MCP (Model Context Protocol): a standard for connecting AI applications to tools and data
-- Automations: turn a useful AI task into a repeatable workflow
-- Working forms and databases: collect messages and store information
-- Custom domains, search visibility and analytics: help people find and use your website
-- Choose one topic to explore after you build and review your first page
+- SEO optimization | Help people find your page on Google | Ask AI for a better page title and description
+- Accessibility & performance audit | Make your page usable and fast for everyone | Run Lighthouse in Chrome, then ask AI to fix the top issues
+- MCP & Connectors | Let AI work inside your other tools | Connect Canva and create a design from the chat
+- Automation | Let AI repeat a task for you | Schedule a task to run every week
+- Pick one, try it this week, then share your link
 
 ## 21. Questions & Your Next Step
 
