@@ -131,7 +131,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Start from the copy you approved
 - Sections: intro, skills, projects, contact
 - Readable text, clear spacing, one accent color
-- Ask AI for a responsive page, then open the preview
+- Ask AI for a **responsive** page, then open the preview
 
 ## 16. Review, Improve & Check Again
 
