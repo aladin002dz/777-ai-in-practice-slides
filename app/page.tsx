@@ -1,6 +1,7 @@
 import SessionDeck from "@/components/SessionDeck";
 import slides from "@/lib/session-slides.json";
 import { siteUrl } from "@/lib/site-url";
+import { renderInline } from "@/lib/inlineMarkdown";
 export default function Page(){
   const resource = {
     "@context":"https://schema.org", "@type":"LearningResource",
@@ -18,7 +19,7 @@ export default function Page(){
         <h2>{slides[0].title}</h2>
         <p>Mahfoudh Arous · 7.77 online session · 15 October 2026 · 19:30–20:45 Algeria time. English slides with Algerian Darja delivery.</p>
         <p>Learn RCTFC prompting, reusable instructions, website design and review, Git, GitHub and GitHub Pages through a professional LinkedIn-to-portfolio example.</p>
-        {slides.slice(1).map((s,i)=><section key={s.title}><h3>{i+2}. {s.title}</h3><ul>{s.bullets.map(b=><li key={b}>{b}</li>)}</ul></section>)}
+        {slides.slice(1).map((s,i)=><section key={s.title}><h3>{i+2}. {s.title}</h3><ul>{s.bullets.map(b=><li key={b}>{renderInline(b)}</li>)}</ul></section>)}
       </details>
     </section></>;
 }

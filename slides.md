@@ -39,11 +39,11 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 
 ## 5. What You Will Learn
 
-- Write a clear website brief using RCTFC
-- Reuse instructions to make AI work more consistently
-- Design and build a simple website from approved profile facts
-- Review the result and request one precise improvement
-- Understand Git, GitHub and website deployment
+- **Prompting:** Write a clear website brief using RCTFC
+- **Skills:** Reuse instructions to make AI work more consistently
+- **Building:** Design and build a simple website from approved profile facts
+- **Reviewing:** Review the result and request one precise improvement
+- **Shipping:** Understand Git, GitHub and website deployment
 
 ## 6. Session Agenda
 
