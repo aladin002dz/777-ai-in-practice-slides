@@ -2,11 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import ExplainerDiagram from "./ExplainerDiagram";
+import PromptNotes from "./PromptNotes";
 import QrCode from "./QrCode";
 import { renderInline } from "@/lib/inlineMarkdown";
 import slides from "@/lib/session-slides.json";
 
-const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Quiz", "Skills & Gems", "Live demo", "Design & build", "Review", "Deploy", "Git & GitHub", "Activity", "What’s next", "Q&A", "Stay connected"];
+const stages = ["Title", "Speaker", "Welcome", "7.77 Program", "Goals", "Agenda", "Poll", "Real-life examples", "Workflow", "Prompting", "Prompting", "Quiz", "Skills & Gems", "Live demo", "Design & build", "Review", "Deploy", "Git & GitHub", "Activity", "What’s next", "Q&A", "Stay connected", "Notes"];
+const CLOSING = 21, NOTES = 22;
 
 export default function SessionDeck() {
   const [index, setIndex] = useState(0);
@@ -31,7 +33,7 @@ export default function SessionDeck() {
   useEffect(() => {if (ready) history.replaceState(null, "", `#${index + 1}`);setAnswer(false);}, [index, ready]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement).matches("button,select,input,textarea") || e.altKey || e.ctrlKey || e.metaKey) return;
+      if ((e.target as HTMLElement).matches("button,select,input,textarea,summary") || e.altKey || e.ctrlKey || e.metaKey) return;
       if (["ArrowRight", "PageDown", " "].includes(e.key)) {e.preventDefault();setIndex(n => Math.min(slides.length - 1, n + 1));}
       if (["ArrowLeft", "PageUp"].includes(e.key)) {e.preventDefault();setIndex(n => Math.max(0, n - 1));}
       if (e.key === "Home") setIndex(0);
@@ -47,11 +49,11 @@ export default function SessionDeck() {
   const renderSlide = (index: number, printing = false) => {
     const slide = slides[index];
     const answer = printing || answerVisible;
-    return <article key={index} className={`slide slide-${index+1}`} aria-label={`Slide ${index+1} of ${slides.length}`} onTouchStart={e => {touch.current={x:e.touches[0].clientX,y:e.touches[0].clientY};}} onTouchEnd={e => {if(!touch.current)return;const dx=e.changedTouches[0].clientX-touch.current.x;const dy=e.changedTouches[0].clientY-touch.current.y;if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy))go(index+(dx<0?1:-1));touch.current=null;}}>
+    return <article key={index} className={`slide slide-${index+1}${index === NOTES ? " slide-notes" : ""}`} aria-label={`Slide ${index+1} of ${slides.length}`} onTouchStart={e => {touch.current={x:e.touches[0].clientX,y:e.touches[0].clientY};}} onTouchEnd={e => {if(!touch.current)return;const dx=e.changedTouches[0].clientX-touch.current.x;const dy=e.changedTouches[0].clientY-touch.current.y;if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(dy))go(index+(dx<0?1:-1));touch.current=null;}}>
       {index === 2 ? <><img className="welcome-template" src="session/welcome-template.png" alt="7.77 program — Welcome Everyone"/><h1 className="welcome-accessible">Welcome Everyone</h1></> : index === 0 ? <><div className="cover-speaker">Mahfoudh Arous</div><h1 className="cover-title">AI in Practice:<br/><span>Design, Build and Deploy your<br/>Personal Website &amp; Portfolio — Without Coding</span></h1><div className="cover-rule"><button type="button" onClick={() => go(index+1)} aria-label="Next slide">▶</button></div><div className="cover-logos" aria-label="Program partners"><img src="session/ministry-logo.png" alt="Algerian ministry emblem"/><img src="session/algerie-telecom-logo.png" alt="Algérie Télécom"/><img src="session/mobilis-logo.png" alt="Mobilis"/></div><div className="cover-meta">7.77 Program | Age: 24–30</div><div className="cover-date">October 15, 2026 · 19:30–20:45</div></> : <>
         <div className="program-label"><span>7.77</span> program</div>
         {index === 3 ? <div className="program-intro"><div><h1>7.77 Digital Skills<br/>for <span>Every Generation</span></h1><p>A national digital empowerment initiative led by Algeria’s <strong>Ministry of Post and Telecommunications</strong>, in partnership with <strong>Algérie Télécom</strong> and <strong>Mobilis</strong>.</p></div><aside><strong>7 → 77</strong><p>Age Range Covered (Years)</p><strong>07</strong><p>Skill Centers (Across Algeria)</p></aside><p className="program-purpose">It aims to strengthen digital skills for citizens aged 7 to 77 through practical, inclusive, and accessible training in areas such as artificial intelligence, cybersecurity, coding, data, cloud technologies, and digital entrepreneurship.</p></div> : index === 1 ? <div className="speaker-layout"><img className="speaker-photo" src="session/speaker.png" alt="Mahfoudh Arous"/><div><span className="eyebrow">Your session speaker</span><h1>Mahfoudh<br/>Arous</h1><p className="speaker-caption">Senior Software Engineer &amp; Mentor</p><ul>{slide.bullets.slice(2).map(b => <li key={b}>{b.startsWith("Website & contact:") ? <a href="https://mahfoudh.dev/" target="_blank" rel="noopener noreferrer">Website &amp; contact: mahfoudh.dev ↗</a> : b.startsWith("LinkedIn:") ? <a href="https://www.linkedin.com/in/mahfoudh-arous/" target="_blank" rel="noopener noreferrer">LinkedIn: in/mahfoudh-arous ↗</a> : b}</li>)}</ul></div></div> : <div className="slide-content"><span className="eyebrow">{stages[index]}</span><h1>{slide.title}</h1>
-          {index === slides.length - 1 ? <div className="closing-layout"><p className="closing-thanks">Thank you for taking part in the 7.77 session.</p><div className="closing-links">{[
+          {index === NOTES ? <PromptNotes printing={printing}/> : index === CLOSING ? <div className="closing-layout"><p className="closing-thanks">Thank you for taking part in the 7.77 session.</p><div className="closing-links">{[
             {title: "Explore the 7.77 Program", url: "https://skillscenter.algerietelecom.dz/programs/777-program", display: "skillscenter.algerietelecom.dz", detail: "Official program information and digital learning opportunities"},
             {title: "Connect with Mahfoudh", url: "https://mahfoudh.dev/", display: "mahfoudh.dev", detail: "My work, projects and ways to get in touch"},
           ].map(link => <a className="closing-link" key={link.url} href={link.url} target="_blank" rel="noopener noreferrer"><div><h2>{link.title} <span aria-hidden="true">↗</span></h2><p>{link.detail}</p><strong>{link.display}</strong></div><div className="closing-qr"><QrCode value={link.url} size={128} label={`Scan to open ${link.title}`}/></div></a>)}</div><p className="closing-action">Your next step: build one page, check it, then share it.</p></div> : [8,9,16].includes(index) ? <div className="explainer-layout" key={index}>
