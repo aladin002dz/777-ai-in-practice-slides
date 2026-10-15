@@ -50,8 +50,8 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - 19:30 | Welcome & the 7.77 Program | 5 min
 - 19:35 | Goals & quick poll | 5 min
 - 19:40 | AI workflow, prompting & quiz | 15 min
-- 19:55 | Live demo: design & build | 20 min
-- 20:15 | Review & deploy | 10 min
+- 19:55 | Live demo: design, build & review | 20 min
+- 20:15 | GitHub & deployment walkthrough | 10 min
 - 20:25 | Mini challenge | 10 min
 - 20:35 | Questions & next steps | 10 min
 
@@ -104,9 +104,9 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 
 - Save a short instruction checklist for tasks you repeat
 - Example: "Use approved facts, write concise copy, flag missing information and check the result."
-- Skills package task instructions and resources in supporting tools
-- Gems provide reusable custom instructions and knowledge in Gemini
-- Live example: apply one prepared instruction set to the website brief
+- Builder equivalent: a Skill packages reusable instructions and resources
+- Save your checklist in a note or a Gemini Gem
+- Reuse the same checklist when you draft another website brief
 
 ## 13. Quick Quiz: Which Instruction Helps Most?
 
@@ -123,14 +123,15 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Website goal: help visitors understand my professional work
 - Approve the copy before building the page
 - Do not invent qualifications, projects, results or testimonials
+- Include your confirmed public profile link alongside the PDF or copied text
 
 ## 15. Design & Build One Clear Page
 
 - Approve the copy before generating the website
-- Use a simple structure: introduction, services, about and next step
+- Use supported sections: introduction, experience/skills or services, projects, about and next step
 - Choose readable text, clear spacing and one main accent color
 - Ask AI to build a responsive page using the approved content
-- Open the preview and explain the visible result
+- Open the preview and test the page
 - A design image is a reference; a website must contain usable text and links
 
 ## 16. Review, Improve & Check Again
@@ -140,7 +141,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Do navigation and approved links work?
 - Can you move through interactive elements with a keyboard?
 - Avoid private information, exposed credentials and pretend contact forms
-- Audience question: what is the most useful improvement?
+- What would make this page more useful to its visitors?
 - Request one specific revision, then repeat the affected checks
 
 ## 17. Git, GitHub & Deploying Your Website
@@ -149,21 +150,31 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - GitHub: keep a project repository online
 - GitHub Pages: publish a static website from a repository
 - Local preview and public website are different stages
-- Prepared walkthrough: files -> repository -> publishing settings -> deployment status -> public URL
+- Browser route: upload index.html and style.css -> Pages settings -> deployment status -> public URL
 - Open and check the online version; a deployment attempt is not proof of success
 - Protect existing websites and never upload secrets or private files
+- No terminal needed for this route; use a separate project repository
 
 ## 18. Mini Challenge: Write Your Website Brief
 
 - Choose: portfolio, service page or small-business website
 - 2 minutes: identify your audience and the action visitors should take
-- 4 minutes: write your RCTFC brief using fictional or approved public facts
+- 4 minutes: adapt the chat template or an example; start with Context, Task and one Constraint
 - Include: page sections, desired format and limits on invented information
 - 3 minutes: discuss two volunteer examples
 - 1 minute: choose one improvement to your brief
 - Use chat or paper; no account or installation is required
 
-## 19. Questions & Your Next Step
+## 19. What’s Next? Topics to Explore
+
+- Connectors: give AI access to selected documents and tools with your permission
+- MCP (Model Context Protocol): a standard for connecting AI applications to tools and data
+- Automations: turn a useful AI task into a repeatable workflow
+- Working forms and databases: collect messages and store information
+- Custom domains, search visibility and analytics: help people find and use your website
+- Choose one topic to explore after you build and review your first page
+
+## 20. Questions & Your Next Step
 
 - What would you like to clarify about prompting, building or deployment?
 - Start with one audience, one goal and one simple page
@@ -171,7 +182,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Test the website before sharing its link
 - Continue with the session's prompts, activity and example files
 
-## 20. Keep Learning, Keep Building
+## 21. Keep Learning, Keep Building
 
 - Thank you for taking part in the 7.77 session.
 - Official 7.77 Program: https://skillscenter.algerietelecom.dz/programs/777-program

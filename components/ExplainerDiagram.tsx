@@ -32,7 +32,7 @@ const content: Record<string, { hub: string; caption: string; nodes: Node[] }> =
     {title:"Constraints",detail:"What must it avoid?",icon:"constraints"}
   ]},
   publishing: { hub: "Your project", caption: "Save versions → host the source → publish and check the public URL.", nodes: [
-    {title:"Git",detail:"Save local versions",icon:"git"},
+    {title:"Git",detail:"Optional · local versions",icon:"git"},
     {title:"GitHub",detail:"Host the repository",icon:"github"},
     {title:"GitHub Pages",detail:"Public URL · open and check it",icon:"github"}
   ]}
