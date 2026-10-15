@@ -1,0 +1,54 @@
+/* Prompt notes: an appendix slide that grows with its content instead of staying 16:9. */
+.slide.slide-notes{aspect-ratio:auto;overflow:visible}
+.slide-notes .slide-content{position:relative;inset:auto;display:block;margin:0 5%;padding:7.5cqw 0 7cqw}
+.notes-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1.5cqw;margin:0 0 1.4cqw}
+.notes-toolbar p{margin:0;font-size:1.3cqw;line-height:1.45;color:#344b3a}
+.notes-toolbar code{font-size:.95em;background:#e1ece3;padding:.1em .35em;border-radius:4px}
+.notes-toolbar div{display:flex;gap:.6cqw;flex-shrink:0}
+.notes-toolbar button{min-height:40px;padding:.5cqw 1.1cqw;border:1px solid #bdcec2;border-radius:8px;background:white;color:#1b6e34;font-size:1.05cqw;white-space:nowrap}
+.slide-content .prompt-list{list-style:none;margin:0;padding:0;display:grid;gap:.8cqw}
+.slide-content .prompt-item{position:relative;margin:0;padding:0;border:1px solid #bdcec2;border-radius:10px;background:#fafbf8}
+.prompt-item summary{display:flex;align-items:center;gap:1.2cqw;padding:.9cqw 10cqw .9cqw 1.2cqw;cursor:pointer;list-style:none;border-radius:10px}
+.prompt-item summary::-webkit-details-marker{display:none}
+.prompt-item summary::after{content:"";width:.7cqw;height:.7cqw;margin-left:.4cqw;border-right:2px solid #239b4b;border-bottom:2px solid #239b4b;transform:rotate(45deg);transition:transform 160ms ease;flex-shrink:0;order:-1}
+.prompt-item details[open] summary::after{transform:rotate(225deg)}
+.prompt-item summary:hover{background:#eff5f0}
+.prompt-item summary:focus-visible{outline:3px solid #239b4b;outline-offset:2px}
+.prompt-number{display:grid;place-items:center;flex-shrink:0;width:2.6cqw;height:2.6cqw;border-radius:50%;background:#e1ece3;color:#196e35;font-weight:750;font-size:1.1cqw}
+.prompt-heading{display:flex;flex-direction:column;flex:1;min-width:0;font-size:1.45cqw;font-weight:650;line-height:1.3;color:#171b18}
+.prompt-heading small{font-size:.8cqw;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#477453}
+.prompt-tool{flex-shrink:0;font-size:.95cqw;font-weight:700;padding:.3cqw .8cqw;border-radius:20px;border:1px solid #bed5c0;color:#1a6b33;background:#eef6f0}
+.prompt-tool.tool-antigravity{border-color:#c3c9ec;color:#3842a0;background:#eef0fb}
+.prompt-tool.tool-any{border-color:#d9cfb8;color:#6b5418;background:#f8f4ea}
+.prompt-copy{position:absolute;top:.85cqw;right:1.1cqw;min-height:40px;min-width:7.5cqw;padding:.45cqw 1cqw;border:1px solid #239b4b;border-radius:8px;background:#239b4b;color:white;font-size:1.05cqw;font-weight:700;white-space:nowrap;transition:background 150ms}
+.prompt-copy:hover{background:#1e7d3c}
+.prompt-copy.is-copied{background:#e4f2e7;color:#176c34}
+.prompt-body{padding:0 1.2cqw 1.2cqw 5.2cqw}
+.prompt-tip{margin:0 0 .8cqw;padding:.6cqw .9cqw;border-left:3px solid #239b4b;background:#eaf0e9;font-size:1.1cqw;line-height:1.45}
+.prompt-body pre{margin:0;padding:1.1cqw 1.3cqw;background:#1d2620;color:#eef3ee;border-radius:8px;font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:1.08cqw;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;user-select:text}
+.prompt-before{display:flex;flex-wrap:wrap;gap:.6cqw 2cqw;margin:0 0 .8cqw;font-size:1.1cqw;line-height:1.45}
+.prompt-before div{display:flex;flex-wrap:wrap;align-items:center;gap:.5cqw}
+.prompt-before dt{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8cqw;color:#477453}
+.prompt-before dd{display:flex;flex-wrap:wrap;gap:.4cqw;margin:0}
+.prompt-before code,.prompt-save code{font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-weight:700;color:#176c34;background:#e1ece3;padding:.1em .45em;border-radius:4px}
+.prompt-save{display:flex;flex-wrap:wrap;align-items:center;gap:.5cqw .8cqw;margin:.8cqw 0 0;padding:.6cqw .9cqw;border:1px dashed #9dbca5;border-radius:8px;background:#f2f7f3;font-size:1.1cqw;line-height:1.45}
+.prompt-save span{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8cqw;color:#477453}
+@media screen and (max-width:800px){
+ .slide-notes .slide-content{margin:0;padding:0}
+ .notes-toolbar{flex-direction:column;align-items:stretch;gap:12px;margin-bottom:18px}
+ .notes-toolbar p{font-size:16px}
+ .notes-toolbar button{font-size:14px;padding:8px 12px;flex:1}
+ .slide-content .prompt-list{gap:10px}
+ .prompt-item summary{flex-wrap:wrap;gap:8px 10px;padding:14px 116px 14px 14px}
+ .prompt-item summary::after{width:9px;height:9px;margin-left:4px}
+ .prompt-number{width:32px;height:32px;font-size:14px}
+ .prompt-heading{flex-basis:calc(100% - 62px);font-size:17px}.prompt-heading small{font-size:11px}
+ .prompt-tool{margin-left:61px;font-size:12px;padding:4px 10px}
+ .prompt-copy{top:12px;right:10px;min-width:96px;font-size:14px;padding:8px 14px}
+ .prompt-body{padding:0 12px 14px}
+ .prompt-tip{font-size:15px;padding:10px 12px;margin-bottom:10px}
+ .prompt-body pre{font-size:14px;padding:14px}
+ .prompt-before{gap:8px 18px;margin-bottom:10px;font-size:15px}.prompt-before div{gap:6px}.prompt-before dt{font-size:11px}.prompt-before dd{gap:6px}
+ .prompt-save{gap:6px 10px;margin-top:10px;padding:10px 12px;font-size:15px}.prompt-save span{font-size:11px}
+}
+@media print{.slide-notes .prompt-body pre{background:white;color:#171b18;border:1px solid #bdcec2;font-size:10pt}}

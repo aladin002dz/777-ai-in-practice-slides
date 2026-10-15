@@ -194,3 +194,19 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - Official 7.77 Program: https://skillscenter.algerietelecom.dz/programs/777-program
 - Connect with Mahfoudh: https://mahfoudh.dev/
 - Your next step: build one page, check it, then share it.
+
+## 23. Session Prompts: Copy & Reuse
+
+Copy-ready prompts, in workflow order (full text in `lib/session-prompts.ts`):
+
+- Extract facts from my LinkedIn PDF with RCTFC (Gemini)
+- Turn the facts into website copy with RCTFC (Gemini)
+- Desktop + mobile design in one image with Nano Banana (Gemini)
+- Gemini writes the Antigravity prompt (Gemini)
+- Build the website in Antigravity (Antigravity)
+- Review before changing anything (Antigravity)
+- Apply one precise fix (Antigravity)
+- Push to GitHub from Antigravity (Antigravity)
+- SEO: title, description and link preview (Antigravity)
+- Fix the top Lighthouse issues (Antigravity)
+- Mini challenge: your website brief (any AI chat)
