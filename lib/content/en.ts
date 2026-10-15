@@ -410,7 +410,7 @@ const en: Deck = {
         {
           marker: "bullet",
           bold: "Use a recipe:",
-          text: "Subject + layout + style + palette + mood: 'Portfolio homepage screenshot, desktop 16:9, minimal, warm white, navy text, green accent'.",
+          text: "Subject + layout + style + palette + mood: 'Portfolio homepage screenshot, minimal, warm white, navy text, green accent'.",
         },
         {
           marker: "bullet",

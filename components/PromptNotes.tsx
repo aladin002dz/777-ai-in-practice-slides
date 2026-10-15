@@ -60,7 +60,8 @@ export default function PromptNotes({ printing = false }: { printing?: boolean }
             <span className={`prompt-tool tool-${p.tool.split(" ")[0].toLowerCase()}`}>{p.tool}</span>
           </summary>
           <div className="prompt-body">
-            {(p.model || p.attach) && <dl className="prompt-before">
+            {(p.mode || p.model || p.attach) && <dl className="prompt-before">
+              {p.mode && <div><dt>Use</dt><dd>{p.mode}</dd></div>}
               {p.model && <div><dt>Model</dt><dd>{p.model}</dd></div>}
               {p.attach && <div><dt>Attach</dt><dd>{p.attach.map(f => <code key={f}>{f}</code>)}</dd></div>}
             </dl>}

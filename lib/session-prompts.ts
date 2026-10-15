@@ -3,6 +3,8 @@ export interface SessionPrompt {
   step: string;
   title: string;
   tool: "Gemini" | "Antigravity" | "Any AI chat";
+  /** Gemini: whether to use a Chat or a Task, and why. */
+  mode?: string;
   /** Gemini model to pick before sending (labels vary by plan; checked October 2026). */
   model?: string;
   /** Files to attach to the message before sending. */
@@ -19,47 +21,56 @@ export const sessionPrompts: SessionPrompt[] = [
     step: "Plan",
     title: "Extract facts from my LinkedIn PDF (RCTFC)",
     tool: "Gemini",
+    mode: "Chat — new chat; you check the table and ask for corrections in follow-ups",
     model: "Pro — most careful reading of the PDF (Flash if Pro isn't available)",
     attach: ["LinkedIn profile PDF"],
     tip: "LinkedIn: Profile → Resources → Save to PDF. Gemini can't open LinkedIn links, so the PDF is the source.",
     text: `Role: Act as a careful profile editor.
-Context: I attached my LinkedIn profile as a PDF. I want to build my one-page personal portfolio website from it.
+Context: I attached my LinkedIn profile as a PDF. My LinkedIn profile URL is https://www.linkedin.com/in/mahfoudh-arous/. I want to build my one-page personal portfolio website from it.
 Task: Extract the facts I can use on my website: name, headline, city/country, about, experience (role, company, dates), education, skills, projects, certifications and languages.
-Format: One table: category | exact fact from the PDF | notes.
+Format: Return the complete content of a Markdown file named extracted_profile_facts.md, inside one code block, ready to copy:
+- a heading "# Profile facts"
+- one table: category | exact fact from the PDF | notes
+- a section "## Public links" with my LinkedIn URL exactly as I wrote it above.
 Constraints:
 - Use only the PDF; copy facts exactly and keep names and dates as written.
 - If something is missing or unreadable, write [MISSING]; do not guess.
 - Do not add achievements, numbers or clients that are not in the PDF.
 - Leave out private details (phone number, personal email, home address).
 - No marketing copy and no code yet.`,
-    save: { file: "facts.md", note: "Paste Gemini's table, correct it against the PDF and add your public links (LinkedIn URL…)." },
+    save: { file: "extracted_profile_facts.md", note: "Copy the code block into this file, check every fact against the PDF and add any other public links (GitHub…)." },
   },
   {
     step: "Plan",
     title: "Turn the facts into website copy (RCTFC)",
     tool: "Gemini",
+    mode: "Chat — new chat; refine the wording in follow-ups",
     model: "Flash — fast and good at writing",
-    attach: ["facts.md"],
+    attach: ["extracted_profile_facts.md"],
     text: `Role: Act as a website content planner.
-Context: I attached facts.md with my approved facts. I checked every fact myself. This is for my one-page personal portfolio. My visitors are [recruiters / clients / collaborators]. After reading, they should [contact me on LinkedIn / view my projects].
+Context: I attached extracted_profile_facts.md with my approved facts. I checked every fact myself. This is for my one-page personal portfolio. My visitors are [recruiters / clients / collaborators]. After reading, they should [contact me on LinkedIn / view my projects].
 Task: Write the copy for these sections: hero (name + one-line headline), about, skills, experience, projects, contact.
-Format: A table: section | heading | copy | source fact from the file. Then a short list of missing information.
+Format: Return the complete content of a Markdown file named copy.md, inside one code block, ready to copy:
+- a heading "# Website copy"
+- one table: section | heading | copy | source fact from the file
+- a section "## Missing information" with a short list.
 Constraints:
 - Use only the facts in the attached file; do not invent anything.
 - Under 250 words in total. Friendly and professional.
 - For contact, use only the public links in the file — no phone number and no contact form.`,
-    save: { file: "copy.md", note: "Paste the copy table and check every line before you design." },
+    save: { file: "copy.md", note: "Copy the code block into this file and check every line before you design." },
   },
   {
     step: "Design",
     title: "Desktop + mobile design in one image (Nano Banana)",
     tool: "Gemini",
+    mode: "Chat — new chat; iterate on the image in follow-ups",
     model: "Nano Banana 2.1 — Gemini's image model (Create image)",
     attach: ["copy.md"],
     tip: "Ask for small changes in follow-ups (e.g. \"make the accent color warmer\").",
-    text: `Create ONE high-fidelity UI mockup image (16:9) of a modern one-page personal portfolio website, showing the SAME design on two devices side by side:
-- Left (about two-thirds of the width): a desktop browser window.
-- Right: a mobile phone screen showing the top of the same page.
+    text: `Create ONE high-fidelity UI mockup image of a modern one-page personal portfolio website, shown as a full-length scrollable page from top to bottom (not cropped to one screen), with the SAME design on two devices side by side:
+- Left (about two-thirds of the width): the full desktop page.
+- Right: the full mobile page, long and narrow, showing every section.
 
 Sections from top to bottom:
 1. Navigation bar with my name and links: About, Skills, Experience, Projects, Contact (a hamburger menu on mobile)
@@ -70,7 +81,7 @@ Sections from top to bottom:
 6. Projects: three cards with a title and one line each (one column on mobile)
 7. Contact: a LinkedIn button
 
-Style: clean and minimal, lots of white space, off-white background, dark text, ONE accent color [teal #0F766E], rounded cards, modern sans-serif font, clear visual hierarchy.
+Style: clean and minimal, balanced white space (even margins and the same spacing between sections — not empty, not crowded), a creative, harmonious color palette of your choice that feels professional, with readable contrast, rounded cards, modern sans-serif font, clear visual hierarchy.
 Both screens must use exactly the same colors, font, content and components; only the layout adapts (one column, full-width cards and easy-to-tap buttons on mobile).
 Use the real headings and short text from the attached copy.md; keep the text short and readable.
 Use a simple circle placeholder for the profile photo — no stock photos of people.`,
@@ -80,15 +91,17 @@ Use a simple circle placeholder for the profile photo — no stock photos of peo
     step: "Build",
     title: "Gemini writes the Antigravity prompt",
     tool: "Gemini",
+    mode: "Chat — new chat; one answer you copy, no long-running work",
     model: "Pro — best at reading the design and writing precise instructions",
     attach: ["copy.md", "design.png"],
     text: `Act as a senior front-end developer who writes prompts for an AI coding agent.
 I will use Google Antigravity to build my website. Using the attached copy.md (approved copy) and design.png (desktop + mobile design), write ONE complete prompt for Antigravity.
-Both files will be in my website folder, so the prompt should tell Antigravity to read them from there.
+Both files and my profile photo (photo.jpg) will be in my website folder, so the prompt should tell Antigravity to read them from there.
 
 The prompt must ask Antigravity to:
 - Build a static one-page website with only index.html and style.css (no frameworks, no build step, no external libraries).
 - Use exactly my approved copy — no new claims and no lorem ipsum.
+- Use my photo photo.jpg for the profile photo, in place of the circle placeholder in the design: round crop, alt text with my name, sized to load fast.
 - Match the design image for both desktop and mobile: layout, colors (give exact hex codes), font, spacing, cards and buttons.
 - Be responsive: one column on phones, readable from 360px wide, with a menu that works on mobile.
 - Use semantic HTML, alt text, good color contrast and visible keyboard focus.
@@ -104,9 +117,9 @@ Return only the final prompt inside one code block, ready to paste.`,
     title: "Build the website in Antigravity",
     tool: "Antigravity",
     attach: ["design.png"],
-    tip: "File → Open Folder: open your website folder (with copy.md, design.png and antigravity-prompt.md inside). In the Agent panel, paste this, replace the last line with the content of antigravity-prompt.md, and attach design.png.",
+    tip: "File → Open Folder: open your website folder (with copy.md, design.png, photo.jpg and antigravity-prompt.md inside). In the Agent panel, paste this, replace the last line with the content of antigravity-prompt.md, and attach design.png.",
     text: `Build my website by following the instructions below.
-The approved copy is in copy.md in this folder. The attached design.png shows the design on desktop and mobile — match it.
+The approved copy is in copy.md and my profile photo is photo.jpg, both in this folder. The attached design.png shows the design on desktop and mobile — match it.
 
 [paste the content of antigravity-prompt.md here]`,
   },
@@ -143,7 +156,7 @@ Then tell me which files changed and re-check the affected part on mobile.`,
     text: `Help me put this website on GitHub. Explain each step in one sentence before you run it, and ask me before you push.
 
 1. Initialize Git in this folder (if it isn't already).
-2. Create a .gitignore so my working files (facts.md, copy.md, design.png, antigravity-prompt.md) are not published.
+2. Create a .gitignore so my working files (extracted_profile_facts.md, copy.md, design.png, antigravity-prompt.md) are not published.
 3. Add only index.html, style.css and the images the site uses.
 4. Commit with a clear message.
 5. Connect to my repository: [paste your repository URL]

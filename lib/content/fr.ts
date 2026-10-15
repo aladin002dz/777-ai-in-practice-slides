@@ -410,7 +410,7 @@ const fr: Deck = {
         {
           marker: "bullet",
           bold: "Suivez une recette :",
-          text: "Sujet + mise en page + style + palette + ambiance : « Capture d'une page d'accueil portfolio, desktop 16:9, minimaliste, blanc chaud, texte bleu marine, accent vert ».",
+          text: "Sujet + mise en page + style + palette + ambiance : « Capture d'une page d'accueil portfolio, minimaliste, blanc chaud, texte bleu marine, accent vert ».",
         },
         {
           marker: "bullet",
