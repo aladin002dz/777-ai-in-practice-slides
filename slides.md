@@ -2,7 +2,7 @@
 
 English slide content | 7.77 Program online session | 15 October 2026
 
-Time: 19:30-20:45, Algeria time. Audience: ages 31-45, new participants.
+Time: 19:30-20:45, Algeria time. Audience: ages 24-30, new participants.
 
 Session tools: use **Gemini and Antigravity free accounts throughout the AI workflow**. Gemini supports planning, content and design guidance; Antigravity supports building, previewing and improving the website. Use Git/GitHub and GitHub Pages for version control and deployment. No paid AI subscription is required for the planned demonstration. Rehearse on the actual free accounts and prepare saved checkpoints for usage limits or unavailable features.
 
@@ -14,7 +14,7 @@ Presenter preparation: deliver explanations in Algerian Darja, retaining English
 - 7.77 Program | Online Session
 - Mahfoudh Arous
 - October 15, 2026 | 19:30-20:45
-- Age group: 31-45
+- Age: 24–30
 - From a clear brief to a website you can review and share
 
 ## 2. Mahfoudh Arous — Bio & Contact

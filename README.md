@@ -2,7 +2,7 @@
 
 AI in Practice: Design, Build and Deploy your Personal Website & Portfolio
 
-October 15, 2026, 19:30-20:45 Algeria time. Ages 31-45. English slides; spoken delivery in Darja.
+October 15, 2026, 19:30-20:45 Algeria time. Ages 24-30. English slides; spoken delivery in Darja.
 
 ## Local preview
 
