@@ -9,7 +9,8 @@
 .cover-title{top:40%;left:4.3%;font-size:3.4cqw;line-height:1.05}
 .cover-title span{font-size:2.65cqw}
 .cover-rule{position:absolute;left:4.3%;right:4.8%;top:61.5%;border-top:2px solid #171b18}
-.cover-rule span{position:absolute;right:0;top:0;transform:translateY(-50%);width:4.4cqw;height:4.4cqw;display:grid;place-items:center;border-radius:50%;background:var(--green);color:white;font-size:2cqw;padding-left:.2cqw}
+.cover-rule button{position:absolute;right:0;top:0;transform:translateY(-50%);width:4.4cqw;height:4.4cqw;display:grid;place-items:center;border-radius:50%;background:var(--green);color:white;font-size:2cqw;padding-left:.2cqw}
+.cover-rule button{border:0;font-family:inherit;line-height:1;cursor:pointer;transition:transform 150ms,background 150ms}.cover-rule button:hover{background:#1e7d3c;transform:translateY(-50%) scale(1.08)}.cover-rule button:focus-visible{outline:3px solid #171b18;outline-offset:3px}
 .cover-meta{top:64%;left:4.9%;font-size:2.1cqw}
 .cover-logos{position:absolute;top:75.5%;left:5%;width:48%;height:15%;display:flex;align-items:center;gap:4.4cqw}
 .cover-logos img{display:block;object-fit:contain;max-height:100%;height:auto}
@@ -36,7 +37,7 @@
   .cover-speaker,.cover-title,.cover-meta,.cover-date,.cover-rule,.cover-logos{position:static;inset:auto;transform:none}
   .cover-speaker{font-size:18px;border-radius:16px;min-width:0;padding:9px 16px;align-self:flex-start;line-height:1.4}
   .cover-title{font-size:38px;line-height:1.1;margin:0;letter-spacing:-.04em}.cover-title span{display:block;font-size:29px;line-height:1.2;margin-top:13px}.cover-title br{display:none}
-  .cover-rule{position:relative;width:100%;margin:3px 0 0}.cover-rule span{width:42px;height:42px;font-size:19px;padding-left:2px}
+  .cover-rule{position:relative;width:100%;margin:3px 0 0}.cover-rule button{width:42px;height:42px;font-size:19px;padding-left:2px}
   .cover-meta{font-size:20px;line-height:1.5;padding-right:30px}.cover-date{font-size:16px;order:5;line-height:1.5}
   .cover-logos{width:100%;height:auto;gap:18px;flex-wrap:wrap;margin-top:8px;order:4}.cover-logos img:nth-child(1){width:55px;max-height:65px}.cover-logos img:nth-child(2){width:112px}.cover-logos img:nth-child(3){width:103px}
   .slide-footer{position:static;margin-top:36px;padding-top:16px;border-top:1px solid #d4ddd5;font-size:12px;line-height:1.5}.slide-1 .slide-footer{order:6;margin-top:8px}
