@@ -26,7 +26,7 @@ The older copied components and language dictionaries are retained as source ref
 
 ## Build and offline copy
 
-`npm run build` creates `out/` for a local web server. `npm run build:usb` also creates `slides-usb/`; open its index.html directly with the full folder beside it. GitHub Pages publishes the deck at https://slides.mahfoudh.dev/. Pushes to main automatically build and deploy using .github/workflows/deploy.yml. All builds serve assets from the domain root. The public/CNAME file is copied into out/ by Next.js and included in the Pages artifact.
+`npm run build` creates `out/` for a local web server. `npm run build:usb` also creates `slides-usb/`; open its index.html directly with the full folder beside it. GitHub Pages publishes the deck at https://mahfoudh.dev/777-ai-in-practice-slides/. Pushes to main automatically build and deploy using .github/workflows/deploy.yml. The workflow sets GITHUB_PAGES=true to prefix Next.js assets with the repository path; local and USB builds keep the default root path.
 
 ## Responsive template reconstruction
 
@@ -44,6 +44,6 @@ Plus Jakarta Sans (Tokotype), bundled locally in public/session/fonts with its S
 
 Descriptive title/description, author, Open Graph/Twitter text, English language, LearningResource JSON-LD, crawlable all-slide transcript and robots.txt are included. Social preview artwork: public/session/social-preview.png.
 
-Before the production build, set SITE_URL to the full confirmed deployment URL including the trailing project path, if any. Then run npm run build:usb. This adds the canonical, absolute social-image URL and one-page sitemap. Slide hashes are navigation states, not separate indexable pages. Do not use a guessed URL or the repository source URL. The target deployment URL is https://slides.mahfoudh.dev/. SITE_URL can override it for another deployment. Live indexing is not verified.
+Before the production build, set SITE_URL to the full confirmed deployment URL including the trailing project path, if any. Then run npm run build:usb. This adds the canonical, absolute social-image URL and one-page sitemap. Slide hashes are navigation states, not separate indexable pages. Do not use a guessed URL or the repository source URL. The default confirmed public URL is https://mahfoudh.dev/777-ai-in-practice-slides/ (supplied by the speaker). SITE_URL can override it for another deployment. Live indexing is not verified.
 
-For this custom subdomain, robots.txt and sitemap.xml are served from the domain root. Configure slides.mahfoudh.dev in Settings > Pages and add a DNS-only CNAME record slides pointing to aladin002dz.github.io. Enable Enforce HTTPS once the certificate is issued. Check public HTML, image URL and canonical, then use Search Console for indexing.
+For GitHub Pages project sites, the host-level robots.txt is controlled at the origin root; this project's robots.txt cannot override it. Submit the project sitemap directly after publishing if appropriate. Check public HTML, image URL and canonical, then use Search Console for indexing.
