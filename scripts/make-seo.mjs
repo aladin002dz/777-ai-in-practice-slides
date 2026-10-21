@@ -1,5 +1,5 @@
 import { writeFileSync, existsSync, unlinkSync } from "node:fs";
-const configured=process.env.SITE_URL || "https://mahfoudh.dev/777-ai-in-practice-slides/";
+const configured=process.env.SITE_URL || "https://slides.mahfoudh.dev/";
 const sitemap="out/sitemap.xml";
 if(configured){
  const url=new URL(configured.endsWith("/")?configured:`${configured}/`);
